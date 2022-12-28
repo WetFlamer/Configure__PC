@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic");
 
 * {
   margin: 0;
@@ -27,7 +27,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 50px;
   color: white;
 }
@@ -35,7 +35,6 @@ a {
   display: flex;
   align-items: center;
   width: 50%;
-
 }
 
 .navigationButton {
@@ -43,10 +42,10 @@ a {
   color: white;
   height: 35px;
 
-
+  transition: 0.5s;
 
   font-size: 25px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
 }
 
 .navigationButtonSelect {
@@ -54,13 +53,51 @@ a {
   color: white;
   height: 35px;
 
-text-decoration: underline;
+  transition: 0.5s;
 
+  text-decoration: underline;
+  text-underline-offset: 6px;
   font-size: 25px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
 }
+.navigationButtonSelect:hover {
+  color: red;
+  transition: 0.5s;
 
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
+}
 
 .navigationButton:hover {
   color: red;
+  transition: 0.5s;
+
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
+}
+.loginBlock {
+  display: flex;
+  margin-left: 25%;
+  align-items: center;
+}
+
+.loginButton {
+  background-color: transparent;
+  border-radius: 10px;
+
+  width: 100px;
+  height: 50px;
+
+  color: white;
+
+  font-size: 20px;
+  font-family: "Montserrat";
+
+  cursor: pointer;
+  transition: 0.5s;
+}
+.loginButton:hover {
+  background-color: rgb(225, 11, 11);
+
+  transition: 0.5s;
 }
