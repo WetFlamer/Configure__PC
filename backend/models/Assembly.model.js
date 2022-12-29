@@ -1,0 +1,48 @@
+const mongoose = require("mongoose");
+
+const assemblySchema = mongoose.Schema({
+  processor: {
+    type: mongoose.Schema.Types.ObjectId,
+    require: true,
+  },
+  motherboard: {
+    type: mongoose.Schema.Types.ObjectId,
+    require: true,
+  },
+  cooler: {
+    type: mongoose.Schema.Types.ObjectId,
+    require: true,
+  },
+  graphics: {
+    type: mongoose.Schema.Types.ObjectId,
+    require: true,
+  },
+  ram: {
+    type: mongoose.Schema.Types.ObjectId,
+    require: true,
+  },
+  ssd: {
+    type: mongoose.Schema.Types.ObjectId,
+    require: true,
+  },
+  hdd: {
+    type: mongoose.Schema.Types.ObjectId,
+  },
+  power: {
+    type: mongoose.Schema.Types.ObjectId,
+    require: true,
+  },
+  compCase: {
+    type: mongoose.Schema.Types.ObjectId,
+    require: true,
+  },
+  image: String,
+  cost: {
+    type: mongoose.Schema.Types.ObjectId,
+    require: true,
+  },
+});
+
+const Assembly = mongoose.model("assemblies", assemblySchema);
+
+module.exports = Assembly;
