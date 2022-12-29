@@ -4,6 +4,7 @@ import logo from "../../images/logo.png";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
+
   return (
     <div className={styles.header}>
       <div className={styles.logoBlock}>
@@ -52,7 +53,7 @@ const Header = () => {
         </NavLink>
       </div>
       <div className={styles.loginBlock}>
-        <button className={styles.loginButton}>Войти</button>
+        <NavLink to={'/login'}><button className={styles.loginButton}>Войти</button></NavLink>
       </div>
     </div>
   );
