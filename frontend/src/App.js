@@ -1,24 +1,21 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './App.css';
-import Assembler from './Components/Assembler/Assembler';
-import AboutUs from './Components/AboutUs/AboutUs';
-import Header from './Components/Header/Header';
-import SignIn from './Components/Authorization/SignIn';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import Assembler from "./Components/Assembler/Assembler";
+import AboutUs from "./Components/AboutUs/AboutUs";
+import Header from "./Components/Header/Header";
+import SignIn from "./Components/Authorization/SignIn";
 
 function App() {
   return (
     <BrowserRouter>
-   <div>
-   <Header/>
+      <Header />
 
-   </div>
-
-   <Routes>
-    <Route path="/configure" element={<Assembler />} />
-    <Route path='/about' element={<AboutUs/>} />
-    <Route path='/login' element={<SignIn/>} />
-    </Routes>
-   </BrowserRouter>
+      <Routes>
+        <Route path="/configure" element={<Assembler />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/login" element={<SignIn />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
