@@ -48,25 +48,6 @@ a {
   font-family: "Montserrat";
 }
 
-.navigationButtonSelect {
-  margin-left: 5%;
-  color: white;
-  height: 35px;
-
-  transition: 0.5s;
-
-  text-decoration: underline;
-  text-underline-offset: 6px;
-  font-size: 25px;
-  font-family: "Montserrat";
-}
-.navigationButtonSelect:hover {
-  color: red;
-  transition: 0.5s;
-
-  opacity: 1;
-  transform: translate3d(0, 0.2em, 0);
-}
 
 .navigationButton:hover {
   color: red;
