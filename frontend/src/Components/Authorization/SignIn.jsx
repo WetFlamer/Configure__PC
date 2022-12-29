@@ -1,10 +1,23 @@
 import React from "react";
 import { useState } from "react";
 import styles from "./Authorization.module.css";
+import { useDispatch, useSelector } from "react-redux";
+import { authSignIn } from "../../features/usersSlice";
 
 const SignIn = () => {
   const [style, setStyle] = useState(styles.formBox);
   const [bgStyle, setBgStyle] = useState(styles.loginBlock);
+  const error = useSelector((state) => state.users.error);
+  const loading = useSelector((state) => state.users.loading);
+  const [login, setLogin] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSetLogin = (e) => {
+    setLogin(e.target.value);
+  };
+  const handleSetPassword = (e) => {
+    setPassword(e.target.value);
+  };
   const handleSignIn = () => {
     setStyle(styles.formBox);
     setBgStyle(styles.loginBlock);
@@ -12,6 +25,14 @@ const SignIn = () => {
   const handleSignUp = () => {
     setStyle(styles.formBoxActive);
     setBgStyle(styles.loginBlockActive);
+  };
+
+  const dispatch = useDispatch();
+
+  const handleLogin =  async (e) => {
+    e.preventDefault();
+     await dispatch(authSignIn({ login, password }));
+     window.location.reload()
   };
 
   return (
@@ -36,37 +57,46 @@ const SignIn = () => {
         </div>
 
         <div className={style}>
-
-            {/* Форма входа */}
-          <form action="#" className={styles.formSignIn}>
+          {/* Форма входа */}
+          <form onSubmit={handleLogin} action="#" className={styles.formSignIn}>
             <h3 className={styles.formTitle}>Вход</h3>
 
             <p>
               <input
+                onChange={handleSetLogin}
                 type="text"
-                name="login"
-                id="1"
+                value={login}
                 placeholder="Логин"
                 className={styles.formInput}
               />
             </p>
             <p>
               <input
+                onChange={handleSetPassword}
                 type="password"
-                name="password"
-                id="2"
+                value={password}
                 placeholder="Пароль"
                 className={styles.formInput}
               />
             </p>
             <p>
-              <button className={styles.formButton}>Войти</button>
+              <button type="submit" className={styles.formButton}>
+                Войти
+              </button>
             </p>
             <p>
               <a href="/" className={styles.formForgot}>
                 Восстановить пароль
               </a>
             </p>
+            <p className={styles.error}> {error ? error : null}</p>
+            {loading ? (
+              <div class={styles.loader}>
+                <div class={styles.scanner}>
+                  <span>Loading...</span>
+                </div>
+              </div>
+            ) : null}
           </form>
           {/* Форма регистрации  */}
           <form action="#" className={styles.formSignUp}>
@@ -74,18 +104,18 @@ const SignIn = () => {
 
             <p>
               <input
+                onChange={handleSetLogin}
                 type="text"
-                name="login"
-                id="1"
+                value={login}
                 placeholder="Логин"
                 className={styles.formInput}
               />
             </p>
             <p>
               <input
+                onChange={handleSetPassword}
                 type="password"
-                name="password"
-                id="2"
+                value={password}
                 placeholder="Пароль"
                 className={styles.formInput}
               />
@@ -93,9 +123,7 @@ const SignIn = () => {
             <p>
               <button className={styles.formButton}>Зарегистрироваться</button>
             </p>
-         
           </form>
-          
         </div>
       </article>
     </div>

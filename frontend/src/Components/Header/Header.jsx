@@ -2,8 +2,14 @@ import React from "react";
 import styles from "./Header.module.css";
 import logo from "../../images/logo.png";
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Header = () => {
+  const token = useSelector((state) => state.users.token);
+  const handleExit = () => {
+    localStorage.clear()
+    window.location.reload()
+  }
 
   return (
     <div className={styles.header}>
@@ -52,9 +58,17 @@ const Header = () => {
           О нас
         </NavLink>
       </div>
-      <div className={styles.loginBlock}>
-        <NavLink to={'/login'}><button className={styles.loginButton}>Войти</button></NavLink>
-      </div>
+      {token ? (
+        <div className={styles.loginBlock}>
+            <button onClick={handleExit} className={styles.loginButton}>Выйти</button>
+        </div>
+      ) : (
+        <div className={styles.loginBlock}>
+          <NavLink to={"/login"}>
+            <button className={styles.loginButton}>Войти</button>
+          </NavLink>
+        </div>
+      )}
     </div>
   );
 };
