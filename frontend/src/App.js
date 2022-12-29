@@ -1,5 +1,6 @@
 import { BrowserRouter } from 'react-router-dom';
 import './App.css';
+import Assembler from './Components/Assembler/Assembler';
 import Header from './Components/Header/Header';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <BrowserRouter>
    <div>
    <Header/>
+   <Assembler/>
    </div>
    </BrowserRouter>
   );
