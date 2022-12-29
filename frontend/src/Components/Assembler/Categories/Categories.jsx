@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 
 const Categories = () => {
   const categories = useSelector((state) => state.categories.categories);
-  console.log(categories);
   const loading = useSelector((state) => state.categories.loading);
   const error = useSelector((state) => state.categories.error);
 
@@ -25,15 +24,17 @@ const Categories = () => {
   }
 
   return (
-    <div>
+    <main className={styles.categoriesContainer}>
       {categories.map((item) => {
         return (
-          <div>
-            <Link to={`category/${categories._id}`}>{item.name}</Link>
+          <div key={item._id}>
+            <div className={styles.categoryItem}>
+              <Link to={`category/${categories._id}`}>{item.name}</Link>
+            </div>
           </div>
         );
       })}
-    </div>
+    </main>
   );
 };
 
