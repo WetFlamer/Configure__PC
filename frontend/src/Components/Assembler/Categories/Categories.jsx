@@ -24,19 +24,23 @@ const Categories = () => {
   }
 
   return (
-    <main className={styles.categoriesContainer}>
-      {categories.map((item) => {
-        return (
+    <div className={styles.main}>
 
-          <div className={styles.categoryItem} key={item._id}>
+      <div className={styles.categoriesContainer}>
+        {categories.map((item) => {
+          return (
 
-            <img className={styles.image} src={`/assets/images/${item.image_white}`} alt="" />
-            <div className={styles.itemName}>{item.name}</div>
-            
-          </div>
-        );
-      })}
-    </main>
+            <div className={styles.categoryItem} key={item._id}>
+
+              <img className={styles.image} src={`/assets/images/${item.image_white}`} alt="" />
+              <div className={styles.itemName}>{item.name}</div>
+
+            </div>
+          );
+        })}
+      </div>
+    </div>
+
   );
 };
 

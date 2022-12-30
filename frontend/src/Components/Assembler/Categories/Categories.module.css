@@ -1,32 +1,31 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic");
 
-main {
+.main {
+  height: 86vh;
   font-family: "Montserrat";
-  font-style: italic;
-  font-weight:600;
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+  font-weight: 600;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8 )),
     url(../../../images/plataFon.jpg);
-  background-repeat: no-repeat;
   background-size: cover;
-  background-position: top;
 }
 
 .categoriesContainer {
-  margin-left: 40px;
   max-width: 350px;
+  max-height: 500px;
+  margin-left: 40px;
+  padding-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  position: static;
+  overflow: auto;
 }
 
 .categoryItem {
-  width: 100%;
-  padding: 10px;
-  margin: 10px;
-  border-bottom: 1px solid rgb(192, 0, 0);
+  border-bottom: 2px solid rgb(131, 0, 0);
   font-size: 20px;
   display: flex;
+  margin-bottom: 15px;
+width: 100%;
 }
 
 .image {
@@ -35,10 +34,11 @@ main {
 }
 
 .itemName {
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
   color: gray;
-  font-size: 22px;
+  font-size: 24px;
+  margin-left: 10px;
 }
