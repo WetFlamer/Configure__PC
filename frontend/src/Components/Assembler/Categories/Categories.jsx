@@ -27,11 +27,9 @@ const Categories = () => {
     <main className={styles.categoriesContainer}>
       {categories.map((item) => {
         return (
-          <div key={item._id}>
-            <div className={styles.categoryItem}>
+            <div key={item._id} className={styles.categoryItem}>
               <Link to={`category/${categories._id}`}>{item.name}</Link>
             </div>
-          </div>
         );
       })}
     </main>
