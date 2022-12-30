@@ -6,7 +6,7 @@ const Assembler = () => {
     <main>
       <Categories />
     </main>
-  );
-};
+  )
+}
 
 export default Assembler;
