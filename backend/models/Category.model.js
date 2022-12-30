@@ -5,6 +5,7 @@ const categorySchema = mongoose.Schema({
     type: String,
     required: true,
     image: String,
+    image_white: String
   },
 });
 

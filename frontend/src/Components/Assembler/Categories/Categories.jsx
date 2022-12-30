@@ -27,9 +27,10 @@ const Categories = () => {
     <main className={styles.categoriesContainer}>
       {categories.map((item) => {
         return (
+
           <div className={styles.categoryItem} key={item._id}>
 
-            <img className={styles.image} src={`/assets/images/${item.image}`} alt="" />
+            <img className={styles.image} src={`/assets/images/${item.image_white}`} alt="" />
             <div className={styles.itemName}>{item.name}</div>
             
           </div>
