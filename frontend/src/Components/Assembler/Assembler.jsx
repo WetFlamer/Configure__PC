@@ -5,7 +5,7 @@ import plataFon from '../../images/plataFon.jpg';
 const Assembler = () => {
     return (
         <div className={styles.assembler}>
-                <div className="description">
+                <div className={styles.description}>
                     <img src={plataFon} alt="fonplata" className={styles.plataFon}/></div>     
         </div>
     );
