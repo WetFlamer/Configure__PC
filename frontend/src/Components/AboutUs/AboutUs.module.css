@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css?family=Andika:regular,italic,700,700italic");
+
+.contacts {
+  width: 50%;
+  height: 90%;
+  padding-top: 5px;
+  padding-left: 10px;
+  margin-left: 1%;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+}
+.contactsTitle {
+    font-family: "Andika", sans-serif;
+}
+.mapTitle {
+    font-family: "Andika", sans-serif;
+
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  background-image: url("../../images/background.jpg");
+  width: 100%;
+  height: 621px;
+}
+.aboutBlock {
+  width: 50%;
+  height: 90%;
+
+  padding-top: 5px;
+  padding-left: 10px;
+  margin-left: 5%;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+}
+
+
+.title {
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+
+  font-family: "Andika", sans-serif;
+}
+.description {
+  font-size: 18px;
+  margin-top: 1%;
+  font-family: "Andika", sans-serif;
+}
+.titleHistory {
+  margin-top: 5%;
+  font-family: "Andika", sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+}
+.historyBlock {
+  display: flex;
+  justify-content: space-around;
+}
+.history1 {
+  width: 200px;
+  height: 165px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px;
+  background: rgb(255, 255, 255);
+  border-radius: 16px;
+  margin: 10px 0px;
+  transition: 0.3s;
+}
+.history1:hover {
+  transition: 0.2s;
+  box-shadow: 1px 1px 5px black;
+}
+.historyTitle {
+    font-family: "Andika", sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+.historyDescription {
+  font-size: 15px;
+  font-family: "Andika", sans-serif;
+
+  padding-left: 20px;
+  padding-top: 10px;
+}

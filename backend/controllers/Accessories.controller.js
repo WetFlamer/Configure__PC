@@ -49,7 +49,7 @@ module.exports.accessoriesController = {
   deleteAcces: async (req, res) => {
     try {
       await Accessories.findByIdAndRemove(req.params.id);
-      return res.json("News deleted");
+      return res.json("accessories deleted");
     } catch (error) {
       return res.json({ error: error.message });
     }
