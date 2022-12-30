@@ -10,7 +10,7 @@ export const fetchCategories = createAsyncThunk(
   "get/categories/fetch",
   async (_, thunkAPI) => {
     try {
-      const res = await fetch("/api/categories");
+      const res = await fetch("/categories");
       const categories = await res.json();
 
       if (categories.error) {
