@@ -56,7 +56,7 @@ module.exports.usersController = {
       if (candidate) {
         return res
           .status(400)
-          .json({message:"Пользователь с таким именем уже существует"});
+          .json({error:"Пользователь с таким именем уже существует"});
       }
       const hashPassword = bcrypt.hashSync(
         password,

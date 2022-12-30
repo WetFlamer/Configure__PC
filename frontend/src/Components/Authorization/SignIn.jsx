@@ -2,12 +2,15 @@ import React from "react";
 import { useState } from "react";
 import styles from "./Authorization.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { authSignIn } from "../../features/usersSlice";
+import { authSignIn, authSignUp } from "../../features/usersSlice";
+import { useEffect } from "react";
 
 const SignIn = () => {
   const [style, setStyle] = useState(styles.formBox);
   const [bgStyle, setBgStyle] = useState(styles.loginBlock);
   const error = useSelector((state) => state.users.error);
+  const token = localStorage.getItem("token");
+  const successfully = useSelector((state) => state.users.successfully);
   const loading = useSelector((state) => state.users.loading);
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
@@ -29,11 +32,24 @@ const SignIn = () => {
 
   const dispatch = useDispatch();
 
-  const handleLogin =  async (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-     await dispatch(authSignIn({ login, password }));
-     window.location.reload()
+    await dispatch(authSignIn({ login, password }));
   };
+  const handleRegister = async (e) => {
+    await e.preventDefault();
+    await dispatch(authSignUp({ login, password }));
+  };
+
+  useEffect(() => {
+    if (successfully) {
+      setStyle(styles.formBox);
+    }
+    if(token) {
+      window.location.href = "/configure";
+
+    }
+  }, [token, successfully]);
 
   return (
     <div className={bgStyle}>
@@ -89,7 +105,14 @@ const SignIn = () => {
                 Восстановить пароль
               </a>
             </p>
-            <p className={styles.error}> {error ? error : null}</p>
+            <p className={styles.error}>
+              {" "}
+              {error ? (
+                error
+              ) : (
+                <p className={styles.successfully}>{successfully}</p>
+              )}
+            </p>
             {loading ? (
               <div class={styles.loader}>
                 <div class={styles.scanner}>
@@ -99,7 +122,11 @@ const SignIn = () => {
             ) : null}
           </form>
           {/* Форма регистрации  */}
-          <form action="#" className={styles.formSignUp}>
+          <form
+            onSubmit={handleRegister}
+            action="#"
+            className={styles.formSignUp}
+          >
             <h3 className={styles.formTitle}>Регистрации</h3>
 
             <p>
@@ -121,8 +148,11 @@ const SignIn = () => {
               />
             </p>
             <p>
-              <button className={styles.formButton}>Зарегистрироваться</button>
+              <button type="submit" className={styles.formButton}>
+                Зарегистрироваться
+              </button>
             </p>
+            {error ? <p className={styles.error}>{error}</p> : null}
           </form>
         </div>
       </article>
