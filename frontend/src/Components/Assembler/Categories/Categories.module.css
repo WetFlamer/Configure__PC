@@ -40,3 +40,7 @@ main a:hover {
   transition: 0.3s;
   /* font-size: 22px; */
 }
+.image {
+  width: 40px;
+  height: 40px;
+}

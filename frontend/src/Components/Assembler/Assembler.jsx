@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import styles from "./Assembler.module.css";
+import React from "react";
 import Categories from "./Categories/Categories";
 
 const Assembler = () => {
