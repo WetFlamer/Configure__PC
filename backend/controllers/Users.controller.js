@@ -1,7 +1,7 @@
 const User = require("../models/User.model");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-
+const { validationResult } = require("express-validator");
 module.exports.usersController = {
   getUsers: async (req, res) => {
     try {
@@ -15,17 +15,19 @@ module.exports.usersController = {
   login: async (req, res) => {
     try {
       const { login, password } = req.body;
-
+      const errors = validationResult(req);
       const candidate = await User.findOne({ login });
 
       if (!candidate) {
-        return res.status(401).json({ error: "User not found" });
+        return res.status(400).json({error:`Пользователь ${login} не найден`});
       }
-
+      if (!errors.isEmpty()) {
+        return res.status(400).json({error: 'Пароль должен быть больше 4 или меньше 10 символов'});
+      }
       const valid = await bcrypt.compare(password, candidate.password);
 
       if (!valid) {
-        return res.status(401).json({ error: "Invalid password" });
+        return res.status(401).json({ error: "Неправильный логин или пароль!" });
       }
 
       const payload = {
@@ -45,17 +47,28 @@ module.exports.usersController = {
 
   register: async (req, res) => {
     try {
+      const errors = validationResult(req);
+      if (!errors.isEmpty()) {
+        return res.status(400).json({error: 'Пароль должен быть больше 4 или меньше 10 символов'});
+      }
       const { login, password } = req.body;
-
-      const hash = await bcrypt.hash(
+      const candidate = await User.findOne({ login });
+      if (candidate) {
+        return res
+          .status(400)
+          .json({error:"Пользователь с таким именем уже существует"});
+      }
+      const hashPassword = bcrypt.hashSync(
         password,
         Number(process.env.BCRYPT_ROUNDS)
       );
-
-      const users = await User.create({ login, password: hash });
-      res.status(201).json(users);
+      const user = User.create({
+        login,
+        password: hashPassword,
+      });
+      return res.json("Пользователь успешно зарегестрирован");
     } catch (error) {
-      res.json({ error: error.message });
+      res.status(400).json("Registration Error" + error);
     }
   },
 };
