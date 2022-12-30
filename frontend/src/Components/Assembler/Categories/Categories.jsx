@@ -30,7 +30,7 @@ const Categories = () => {
           <div key={item._id}>
             <div className={styles.categoryItem}>
        
-            <img className={styles.image} src={`/assets/images/${item.image}`} alt="" />
+            <img className={styles.image} src={`/assets/images/${item.image_whiteg}`} alt="" />
               <Link to={`category/${categories._id}`}>{item.name}</Link>
             </div>
           </div>
