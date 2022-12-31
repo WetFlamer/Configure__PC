@@ -25,7 +25,6 @@ const Categories = () => {
 
   return (
     <div className={styles.main}>
-      <div className={styles.bgCategories}>
         <div className={styles.categoriesContainer}>
           {categories.map((item) => {
             return (
@@ -39,7 +38,6 @@ const Categories = () => {
             )
           })}
         </div>
-      </div>
     </div>
 
   )
