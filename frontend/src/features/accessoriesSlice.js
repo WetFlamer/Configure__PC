@@ -3,6 +3,7 @@ const initialState = {
     loading: false,
     error: null,
     accessories: [],
+    acs: [],
 };
 
 
@@ -21,7 +22,21 @@ export const fetchAccesories = createAsyncThunk(
         }
     }
 );
-
+export const fetchAcs = createAsyncThunk(
+  "get/ACCESSORIES",
+  async (data, thunkAPI) => {
+      try {
+          const res = await fetch(`/accessories`);
+          const accessories = await res.json();
+          if (accessories.error) {
+              return thunkAPI.rejectWithValue(accessories.error);
+          }
+          return thunkAPI.fulfillWithValue(accessories);
+      } catch (error) {
+          return thunkAPI.rejectWithValue(error);
+      }
+  }
+);
 
 export const accesoriesSlice = createSlice({
     name: "accessories",
@@ -41,6 +56,19 @@ export const accesoriesSlice = createSlice({
           state.loading = false;
           state.error = null;
           state.accessories = action.payload;
+        })
+        .addCase(fetchAcs.rejected, (state, action) => {
+          state.loading = false;
+          state.error = action.payload;
+        })
+        .addCase(fetchAcs.pending, (state, action) => {
+          state.loading = true;
+          state.error = null;
+        })
+        .addCase(fetchAcs.fulfilled, (state, action) => {
+          state.loading = false;
+          state.error = null;
+          state.acs = action.payload;
         });
     },
   });

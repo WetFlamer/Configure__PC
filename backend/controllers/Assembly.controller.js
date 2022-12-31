@@ -8,7 +8,6 @@ module.exports.assemblyController = {
       price,
       processor,
       motherboard,
-      cooler,
       graphics,
       ram,
       ssd,
@@ -26,7 +25,6 @@ module.exports.assemblyController = {
         price,
         processor,
         motherboard,
-        cooler,
         graphics,
         ram,
         ssd,
@@ -44,7 +42,7 @@ module.exports.assemblyController = {
 
   getAssembly: async (req, res) => {
     try {
-      const assembly = await Assembly.findOne({ id: req.params.id });
+      const assembly = await Assembly.find();
       return res.json(assembly);
     } catch (error) {
       return res.json({ error: error.message });

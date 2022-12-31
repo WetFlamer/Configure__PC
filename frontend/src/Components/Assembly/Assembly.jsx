@@ -1,0 +1,44 @@
+import React, { useEffect } from "react";
+import styles from "./Assembly.module.css";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchAssembles } from "../../features/assemblesSlice";
+import Product from "./Product/Product";
+import { fetchAcs } from "../../features/accessoriesSlice";
+import { fetchCategories } from "../../features/categoriesSlice";
+
+const Assembly = () => {
+  const assembles = useSelector((state) => state.assembles.assembles);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchAssembles());
+    dispatch(fetchAcs());
+    dispatch(fetchCategories())
+  }, [dispatch]);
+  return (
+    <div className={styles.main}>
+      <div className={styles.bg}>
+        {assembles.map((item) => {
+          return (
+            <Product
+              key={item._id}
+              graphics={item.graphics}
+              description={item.description}
+              name={item.name}
+              cost={item.cost}
+              image={item.image}
+              processor={item.processor}
+              ram={item.ram}
+              motherboard={item.motherboard}
+              ssd={item.ssd}
+              hdd={item.hdd}
+              power={item.power}
+              compCase={item.compCase}
+            />
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+export default Assembly;

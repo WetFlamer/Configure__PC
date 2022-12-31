@@ -8,7 +8,7 @@ const Assembler = () => {
     <div className={styles.main}>
       <div className={styles.bg}>
         <Categories />
-        <Accessories />
+        <Accessories/>
       </div>
 
     </div>
