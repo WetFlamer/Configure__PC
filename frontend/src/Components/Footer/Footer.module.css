@@ -25,7 +25,6 @@ footer {
 .wrapper_1 {
   width: 20%;
   height: 90%;
-  border: 1px solid brown;    
   color: rgb(172, 172, 172);
 }
 
@@ -46,36 +45,75 @@ footer {
   transition: 0.3s;
 }
 
-.wrapper_1 p {
-  /* font-size: 14px; */
+.wrapper_1 .h4 {
+  border-bottom: 1px solid #ccc;
+  width: 190px;
+  margin-bottom: 40px;
 }
 
 .wrapper_2 {
   width: 79%;
   height: 90%;
-  border: 1px solid brown;
+  display: flex;
+  justify-content: space-around;
+}
+
+.company .h4 {
+  border-bottom: 1px solid #ccc;
+  width: 88px;
+  margin-bottom: 40px;
+  color: #ccc;
+}
+
+.company p {
+  color: rgb(174, 0, 0);
+  font-size: 16px;
+  margin-bottom: 5%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.company p:hover {
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.buyers .h4 {
+  border-bottom: 1px solid #ccc;
+  width: 115px;
+  margin-bottom: 40px;
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.buyers p {
+  color: rgb(174, 0, 0);
+  font-size: 16px;
+  margin-bottom: 5%;
+  cursor: pointer;
+}
+
+.buyers p:hover {
+  color: #ccc;
+  transition: 0.3s;
 }
 
 .wrapper_3 {
   width: 100%;
   height: 50px;
-  /* border: 1px solid brown; */
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .social {
-  /* border: 1px solid brown; */
   width: 40%;
   text-align: start;
   display: flex;
-  gap: 10%;
-
+  gap: 5%;
 }
 
 .copyright {
-  /* border: 1px solid brown; */
   width: 25%;
   color: #ccc;
   text-align: end;
@@ -83,5 +121,5 @@ footer {
 }
 
 hr {
-    margin: 20px 0;
+  margin: 20px 0;
 }

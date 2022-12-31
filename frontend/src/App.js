@@ -11,16 +11,19 @@ function App() {
 
   if (!token) {
     return (
-    <>
-      <Header />
+      <>
+        <Header />
 
-      <Routes>
-        <Route path="/" element={<Navigate to={"/configure"} />} />
-        <Route path="/configure" element={<Assembler />} />
-        <Route path="/about" element={<AboutUs />} />
-        <Route path="/login" element={<SignIn />} />
-      </Routes>
-    </>)
+        <Routes>
+          <Route path="/" element={<Navigate to={"/configure"} />} />
+          <Route path="/configure" element={<Assembler />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/login" element={<SignIn />} />
+        </Routes>
+
+        <Footer />
+      </>
+    );
   }
   return (
     <>
@@ -30,8 +33,10 @@ function App() {
         <Route path="/" element={<Navigate to={"/configure"} />} />
         <Route path="/configure" element={<Assembler />} />
         <Route path="/about" element={<AboutUs />} />
-        <Route path="/login" element={<Navigate to={'/configure'}/>} />
+        <Route path="/login" element={<Navigate to={"/configure"} />} />
       </Routes>
+
+      <Footer />
     </>
   );
 }
