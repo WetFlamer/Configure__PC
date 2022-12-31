@@ -1,8 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic");
 
-
-
-.bgCategories {
+.main {
+  height: 86vh;
+  font-family: "Montserrat";
+  font-weight: 600;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(../../../images/plataFon.jpg);
+  background-size: cover;
 }
 
 .categoriesContainer {
@@ -17,8 +21,7 @@
   border-bottom: 2.5px solid rgb(131, 0, 0);
   font-size: 20px;
   display: flex;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   width: 100%;
 }
 
@@ -29,6 +32,7 @@
 }
 
 .itemName {
+
   display: flex;
   align-items: center;
   justify-content: center;
