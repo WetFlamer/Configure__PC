@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic");
+
+.productContainer {
+  border: 1px solid #000;
+  background-color: #1c232e;
+  padding: 0 1.5rem 0.8125rem;
+  margin-left: 1%;
+  box-sizing: content-box;
+  height: 100%;
+}
+.poster {
+  display: flex;
+  margin-top: -2.125rem;
+  margin-bottom: -0.8125rem;
+  margin-left: 9%;
+  width: 220px;
+  height: 220px;
+}
+.title {
+  font-size: 20px;
+  line-height: 1px;
+  margin-top: 40px;
+  color: white;
+  cursor: pointer;
+}
+.title:hover {
+  color: rgb(206, 15, 15);
+}
+.price {
+  margin-top: 20px;
+  font-size: 20px;
+
+  color: rgb(179, 12, 12);
+}
+.buyButton {
+  border: none;
+  width: 93px;
+  height: 40px;
+  background-color: red;
+  border-radius: 5px;
+  color: white;
+
+  cursor: pointer;
+  font-size: 17px;
+  font-family: "Montserrat";
+}
+.buyButton:hover {
+  background-color: rgb(127, 120, 120);
+}
+.buttonMore {
+  border: none;
+  width: 99px;
+  height: 40px;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-family: "Montserrat";
+  background-color: rgb(58, 57, 57);
+}
+.buttonMore:hover {
+  background-color: rgb(69, 68, 68);
+}
+.description {
+  width: 272px;
+  font-family: "PF DinDisplay Pro";
+  font-size: 0.75rem;
+  line-height: 1.33;
+  color: #8490a4;
+  margin-bottom: 1rem;
+  margin-top: 5%;
+}
+.line {
+  border-bottom: 1px solid #f00; /* Параметры линии */
+}
+.catalog {
+}
+.acsTitle {
+  font-family: "Montserrat";
+  font-size: 0.75rem;
+  line-height: 1.33;
+  color: #8490a4;
+  margin-bottom: 1px;
+
+  margin-top: 4%;
+}
+.acsName {
+  font-size: 16px;
+  line-height: 1;
+  color: #c3cee1;
+  width: 100%;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-top: 3%;
+  margin-left: 1%;
+}
+.posterAcs {
+  width: 35px;
+  height: 35px;
+}
+.acsBlockN {
+  display: flex;
+}

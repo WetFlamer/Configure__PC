@@ -9,10 +9,6 @@ const assemblySchema = mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     require: true,
   },
-  cooler: {
-    type: mongoose.Schema.Types.ObjectId,
-    require: true,
-  },
   graphics: {
     type: mongoose.Schema.Types.ObjectId,
     require: true,
@@ -23,7 +19,6 @@ const assemblySchema = mongoose.Schema({
   },
   ssd: {
     type: mongoose.Schema.Types.ObjectId,
-    require: true,
   },
   hdd: {
     type: mongoose.Schema.Types.ObjectId,
