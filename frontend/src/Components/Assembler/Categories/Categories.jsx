@@ -1,16 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Categories.module.css";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchCategories } from "../../../features/categoriesSlice";
+import { fetchCategories, setCategory } from "../../../features/categoriesSlice";
 import { Link } from "react-router-dom";
 
 const Categories = () => {
   const categories = useSelector((state) => state.categories.categories);
   const loading = useSelector((state) => state.categories.loading);
   const error = useSelector((state) => state.categories.error);
-
   const dispatch = useDispatch();
-
+  const handleCategory = (id) => {
+    dispatch(setCategory({id}))
+  }
   useEffect(() => {
     dispatch(fetchCategories());
   }, [dispatch]);
@@ -25,19 +26,19 @@ const Categories = () => {
 
   return (
     <div className={styles.main}>
-        <div className={styles.categoriesContainer}>
-          {categories.map((item) => {
-            return (
+      <div className={styles.categoriesContainer}>
+        {categories.map((item) => {
+          return (
 
-              <div className={styles.categoryItem} key={item._id}>
+            <div className={styles.categoryItem} key={item._id} onClick={() => handleCategory(item._id)}>
 
-                <img className={styles.image} src={`/assets/images/${item.image_white}`} alt="" />
-                <div className={styles.itemName}>{item.name}</div>
+              <img className={styles.image} src={`/assets/images/${item.image_white}`} alt="" />
+              <div className={styles.itemName}>{item.name}</div>
 
-              </div>
-            )
-          })}
-        </div>
+            </div>
+          )
+        })}
+      </div>
     </div>
 
   )

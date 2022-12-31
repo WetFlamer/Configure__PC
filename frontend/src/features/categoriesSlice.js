@@ -1,10 +1,11 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createAction, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   loading: false,
   error: null,
   categories: [],
-};
+  category: '63aed17dfe379dc26cf4e422'
+}
 
 export const fetchCategories = createAsyncThunk(
   "get/categories/fetch",
@@ -22,13 +23,23 @@ export const fetchCategories = createAsyncThunk(
     }
   }
 );
+export const setCategory = createAsyncThunk('setCategory', ({ id }, _) => {
 
-export const categoriesSlice = createSlice({
+  return id
+
+});
+
+const categoriesSlice = createSlice({
   name: "categories",
   initialState,
   reducers: {},
   extraReducers: (builder) => {
     builder
+      .addCase(setCategory.fulfilled, (state, action) => {
+        console.log(state.category);
+        state.category = action.payload;
+      }
+      )
       .addCase(fetchCategories.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload;

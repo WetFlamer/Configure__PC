@@ -6,8 +6,11 @@ import Accessories from "./Accessories/Accessories";
 const Assembler = () => {
   return (
     <div className={styles.main}>
-      <Categories />
-      <Accessories />
+      <div className={styles.bg}>
+        <Categories />
+        <Accessories />
+      </div>
+
     </div>
   )
 }

@@ -1,10 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic");
 .main{
   display: flex;
-  background-color: rgb(36, 36, 36);
-  margin: 20px 20px 100px 20px;
-  padding: 30px 10px 30px 30px;
-  width: 100vw;
+
 }
 
 .categoriesContainer {
@@ -47,7 +44,7 @@
 }
 
 .itemName {
-
+cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;

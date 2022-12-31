@@ -35,16 +35,16 @@ module.exports.accessoriesController = {
     }
   },
 
-//   getAccesByCategoryId: async (req, res) => {
-//     try {
-//       const accessories = await Accessories.find({
-//         category: req.params.categoryId,
-//       }).populate("category");
-//       return res.json(accessories);
-//     } catch (error) {
-//       return res.json({ error: error.message });
-//     }
-//   },
+  getAccesByCategoryId: async (req, res) => {
+    try {
+      const accessories = await Accessories.find({
+        category: req.params.id,
+      }).populate("category");
+      return res.json(accessories);
+    } catch (error) {
+      return res.json({ error: error.message });
+    }
+  },
 
   deleteAcces: async (req, res) => {
     try {
