@@ -5,13 +5,13 @@ const initialState = {
     accessories: [],
 };
 
+
 export const fetchAccesories = createAsyncThunk(
     "get/accessories",
-    async (_, thunkAPI) => {
+    async (data, thunkAPI) => {
         try {
-            const res = await fetch("/accessories");
+            const res = await fetch(`/category/${data.categoryId}`);
             const accessories = await res.json();
-
             if (accessories.error) {
                 return thunkAPI.rejectWithValue(accessories.error);
             }
@@ -40,7 +40,7 @@ export const accesoriesSlice = createSlice({
         .addCase(fetchAccesories.fulfilled, (state, action) => {
           state.loading = false;
           state.error = null;
-          state.accesories = action.payload;
+          state.accessories = action.payload;
         });
     },
   });
