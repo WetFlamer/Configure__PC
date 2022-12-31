@@ -1,39 +1,49 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic");
-
-.main {
-  height: 86vh;
-  font-family: "Montserrat";
-  font-weight: 600;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url(../../../images/plataFon.jpg);
-  background-size: cover;
+.main{
+  display: flex;
 }
 
 .categoriesContainer {
-  max-width: 350px;
+  margin-top: 50px;
+  max-width: 400px;
   max-height: 500px;
   margin-left: 40px;
-  padding-top: 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   overflow: auto;
+  padding-right: 25px;
+}
+
+.categoriesContainer::-webkit-scrollbar {
+  width: 5px;
+}
+
+.categoriesContainer::-webkit-scrollbar-track {
+  background: rgb(36, 36, 36);
+  border-radius: 20px;
+}
+
+.categoriesContainer::-webkit-scrollbar-thumb {
+  background-color: rgb(85, 0, 0);
+  border-radius: 20px;
 }
 
 .categoryItem {
-  border-bottom: 2px solid rgb(131, 0, 0);
+  border-radius: 3px;
+  border-bottom: 2.5px solid rgb(131, 0, 0);
   font-size: 20px;
   display: flex;
   margin-bottom: 15px;
+  padding-bottom: 10px;
   width: 100%;
 }
 
 .image {
+  margin-left: 5px;
   width: 40px;
   height: 40px;
 }
 
 .itemName {
+
   display: flex;
   align-items: center;
   justify-content: center;

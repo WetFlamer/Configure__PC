@@ -1,11 +1,12 @@
 import React from "react";
 import Categories from "./Categories/Categories";
+import styles from './Assembler.module.css';
 
 const Assembler = () => {
   return (
-    <main>
+    <div className={styles.main}>
       <Categories />
-    </main>
+    </div>
   )
 }
 
