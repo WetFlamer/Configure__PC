@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic");
-.main{
+
+.main {
   display: flex;
 
 }
@@ -44,7 +45,7 @@
 }
 
 .itemName {
-cursor: pointer;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,6 +54,17 @@ cursor: pointer;
   margin-left: 10px;
   transition: 0.5s
 }
+.itemNameRed {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(131, 0, 0);
+  font-size: 18px;
+  margin-left: 10px;
+  transition: 0.5s
+}
+
 .itemName:hover {
   color: rgb(125, 48, 48);
 
