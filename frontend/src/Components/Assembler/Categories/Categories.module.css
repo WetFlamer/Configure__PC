@@ -36,6 +36,7 @@
   width: 100%;
 }
 
+
 .image {
   margin-left: 5px;
   width: 40px;
@@ -50,4 +51,9 @@
   color: gray;
   font-size: 24px;
   margin-left: 10px;
+  transition: 2s
+}
+.itemName:hover {
+  color: rgb(125, 48, 48);
+
 }
