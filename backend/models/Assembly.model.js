@@ -37,8 +37,16 @@ const assemblySchema = mongoose.Schema({
     require: true,
   },
   image: String,
+  name: {
+    type: String,
+    require: true,
+  },
+  description: {
+    type: String,
+    require: true,
+  },
   cost: {
-    type: mongoose.Schema.Types.ObjectId,
+    type: Number,
     require: true,
   },
 });

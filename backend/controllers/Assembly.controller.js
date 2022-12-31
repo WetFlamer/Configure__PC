@@ -3,6 +3,9 @@ const Assembly = require("../models/Assembly.model");
 module.exports.assemblyController = {
   createAssembly: async (req, res) => {
     const {
+      name,
+      description,
+      price,
       processor,
       motherboard,
       cooler,
@@ -18,6 +21,9 @@ module.exports.assemblyController = {
 
     try {
       const assembly = await Assembly.create({
+        name,
+        description,
+        price,
         processor,
         motherboard,
         cooler,
