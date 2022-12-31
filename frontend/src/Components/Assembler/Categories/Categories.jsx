@@ -8,9 +8,11 @@ const Categories = () => {
   const categories = useSelector((state) => state.categories.categories);
   const loading = useSelector((state) => state.categories.loading);
   const error = useSelector((state) => state.categories.error);
+  const selected = useSelector((state) => state.categories.category);
+
   const dispatch = useDispatch();
   const handleCategory = (id) => {
-    dispatch(setCategory({id}))
+    dispatch(setCategory({ id }))
   }
   useEffect(() => {
     dispatch(fetchCategories());
@@ -32,8 +34,8 @@ const Categories = () => {
 
             <div className={styles.categoryItem} key={item._id} onClick={() => handleCategory(item._id)}>
 
-              <img className={styles.image} src={`/assets/images/${item.image_white}`} alt="" />
-              <div className={styles.itemName}>{item.name}</div>
+              <img className={styles.image} src={`/assets/images/${selected === item._id ? item.image : item.image_white}`} alt="" />
+              <div className={selected === item._id ? styles.itemNameRed : styles.itemName}>{item.name}</div>
 
             </div>
           )

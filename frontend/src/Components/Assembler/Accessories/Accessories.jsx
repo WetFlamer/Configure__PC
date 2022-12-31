@@ -10,27 +10,29 @@ const Accessories = () => {
     const id = useSelector((state) => state.categories.category);
 
     const dispatch = useDispatch();
-  
+
     useEffect(() => {
-      dispatch(fetchAccesories({categoryId: id}));
+        dispatch(fetchAccesories({ categoryId: id }));
     }, [dispatch, id]);
-  
+
     if (error) {
-      return <div>{error}</div>;
+        return <div>{error}</div>;
     }
-  
+
     if (loading) {
-      return <div>Loading...</div>;
+        return <div>Loading...</div>;
     }
-    
+
     return (
         <div className={styles.main}>
             {accessories.map((accessory) => {
                 return (
-                    <div>{accessory.name} {accessory.category.name}</div>
-    
+                    <div className={styles.accessory}>
+                        {accessory.name}
+                    </div>
+
                 )
-            })} 
+            })}
         </div>
     );
 };
