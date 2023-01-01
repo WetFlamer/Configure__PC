@@ -7,11 +7,11 @@ const Parts = ({
   compCase,
   ssd,
   motherboard,
+  hdd,
   ram,
   graphics,
 }) => {
   const accessory = useSelector((state) => state.accessories.acs);
-  const categories = useSelector((state) => state.categories.categories);
   return (
     <div>
      <div>
@@ -44,12 +44,16 @@ const Parts = ({
         }
         return null;
       })}
-      <p className={styles.acsTitle}>SSD:</p>
+      {ssd ? <p className={styles.acsTitle}>SSD:</p> : <p className={styles.acsTitle}>HDD:</p>}
       {accessory.map((item) => {
 
         if (item._id === ssd) {
           return <div className={styles.acsBlockN}> <img className={styles.posterAcs} src={`/assets/images/${item.category.image_white}`} alt="" /><p className={styles.acsName}>{item.name}</p></div>
         }
+        if(item._id === hdd) {
+          return <div className={styles.acsBlockN}> <img className={styles.posterAcs} src={`/assets/images/${item.category.image_white}`} alt="" /><p className={styles.acsName}>{item.name}</p></div>
+
+        } 
         return null;
       })}
       <p className={styles.acsTitle}>Блок питания:</p>
