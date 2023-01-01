@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes, useParams } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Assembler from "./Components/Assembler/Assembler";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import Header from "./Components/Header/Header";
