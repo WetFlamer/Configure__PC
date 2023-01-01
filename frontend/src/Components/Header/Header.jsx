@@ -15,7 +15,7 @@ const Header = () => {
   }
   useEffect (() => {
     dispatch(fetchAssembles());
-  })
+  }, [dispatch])
   return (
     <div className={styles.header}>
       <div className={styles.logoBlock}>

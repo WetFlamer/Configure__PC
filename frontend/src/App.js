@@ -11,28 +11,6 @@ import { Fullstory } from "./Components/Assembly/Product/Fullstory";
 
 function App() {
   const token = useSelector((state) => state.users.token);
-
-
-  if (!token) {
-    return (
-      <>
-        <Header />
-
-        <Routes>
-          <Route path="/" element={<Navigate to={"/configure"} />} >
-          <Route path="configure" element={<Assembler />} />
-          <Route path="assembly" element={<Assembly />} />
-          <Route path="about" element={<AboutUs />} />
-          <Route path="login" element={<SignIn />} />
-          <Route path="assembly/:id" element={<Fullstory />} />
-          <Route path="cart" element={<Navigate to={"/configure"} />} />
-          </Route>
-        </Routes>
-
-        <Footer />
-      </>
-    );
-  }
   return (
     <>
       <Header />
@@ -44,7 +22,7 @@ function App() {
         <Route path="/assembly" element={<Assembly />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="assembly/:id" element={<Fullstory />} />
-        <Route path="/login" element={<Navigate to={"/configure"} />} />
+        {token ? <Route path="/login" element={<Navigate to={"/configure"} />} /> : <Route path="/login" element={<SignIn />} />}
       </Routes>
 
       <Footer />
