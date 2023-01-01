@@ -1,9 +1,10 @@
 import React from "react";
 import styles from "./Footer.module.css";
-import whats from "../../images/icons/whats.png";
+import tg from "../../images/icons/tg.png";
 import inst from "../../images/icons/instagram.png";
 import twitter from "../../images/icons/twitter.png";
 import yt from "../../images/icons/youtube.png";
+import git from "../../images/icons/git.png";
 
 const Footer = () => {
   return (
@@ -52,21 +53,36 @@ const Footer = () => {
         <hr />
         <div className={styles.wrapper_3}>
           <div className={styles.social}>
-            <a href="http://whatsapp.com">
-              <img src={whats} alt="" />
+            <a
+              href="https://web.telegram.org/k/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={tg} alt="" />
             </a>
-            <a href="http://instagram.com">
-              <img src={inst} alt="" />
+            <a href="http://instagram.com" target="_blank" rel="noreferrer">
+              <img src={inst} alt="instagram" />
             </a>
-            <a href="http://twitter.com">
-              <img src={twitter} alt="" />
+            <a href="http://twitter.com" target="_blank" rel="noreferrer">
+              <img src={twitter} alt="twitter" />
             </a>
-            <a href="http://youtube.com">
-              <img src={yt} alt="" />
+            <a
+              href="https://www.youtube.com/watch?v=hd6LWgsVZ7U&ab_channel=WeldonRiddock"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={yt} alt="youtube" />
+            </a>
+            <a
+              href="http://github.com/RashidCHAB"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={git} alt="git" />
             </a>
           </div>
           <div className={styles.copyright}>
-            © 2020-2022 Matrix | All Rights Reserved
+            © 2020-2023 Matrix | All Rights Reserved
           </div>
         </div>
       </div>
