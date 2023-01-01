@@ -27,5 +27,8 @@ router.post(
   ],
   usersController.login
 );
+router.patch('/addtoCart/:userId/:assemblyId', authMiddleware, usersController.addToCartAssembly)
+router.get('/cart/:userId',  usersController.getAssemblyCart)
+router.patch('/delete/cart/:userId/:assemblyId', authMiddleware, usersController.deleteAssemblyfromCart)
 
 module.exports = router;

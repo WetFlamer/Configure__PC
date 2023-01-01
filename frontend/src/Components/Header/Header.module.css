@@ -74,7 +74,6 @@ a {
 
   font-size: 20px;
   font-family: "Montserrat";
-
   cursor: pointer;
   transition: 0.5s;
 }
@@ -83,6 +82,17 @@ a {
   border: 2px solid black;
   color: black;
   box-shadow: 1px 1px 1px 2px black;
-
   transition: 0.5s;
+}
+.cart {
+height: 30px;
+width: 30px;
+  background-image: url('../../images/icons/cart_white.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+margin-right: 20px;
+  cursor: pointer;
+}
+.cart:hover {
+  background-image: url('../../images/icons/cart_red.png');
 }
