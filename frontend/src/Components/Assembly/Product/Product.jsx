@@ -34,7 +34,7 @@ const Product = ({
         src={`/assets/images/assembly/${image}`}
         alt=""
       />
-      <Link to={`/assembly/${id}`}><div className={styles.title}>{name}</div></Link>
+      <div className={styles.title}>{name}</div>
       <div className={styles.price}>{cost} ₽</div>
       <button onClick={handleAdd} className={styles.buyButton}>
         В корзину
