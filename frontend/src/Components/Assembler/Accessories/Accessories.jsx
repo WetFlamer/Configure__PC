@@ -28,6 +28,7 @@ const Accessories = () => {
             {accessories.map((accessory) => {
                 return (
                     <div className={styles.accessory}>
+                        <input type='radio' name='accessory' className={styles.radioInput}/>
                         {accessory.name}
                     </div>
 

@@ -29,6 +29,7 @@ const Parts = ({
                 <p className={styles.acsName}>{item.name}</p>
               </div>
             );
+            return <div className={styles.acsBlockN}> <img className={styles.posterAcs} src={`/assets/images/${item.category.image_white}`} alt="" /><p className={styles.acsName}>{item.name}</p></div>
           }
           return null;
         })}
@@ -81,6 +82,11 @@ const Parts = ({
               <p className={styles.acsName}>{item.name}</p>
             </div>
           );
+        }
+
+        if (item._id === hdd) {
+          return <div className={styles.acsBlockN}> <img className={styles.posterAcs} src={`/assets/images/${item.category.image_white}`} alt="" /><p className={styles.acsName}>{item.name}</p></div>
+
         }
         return null;
       })}
