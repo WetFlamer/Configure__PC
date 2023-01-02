@@ -62,7 +62,7 @@
   color: rgb(131, 0, 0);
   font-size: 18px;
   margin-left: 10px;
-  transition: 0.5s
+  transition: 0.3s
 }
 
 .itemName:hover {

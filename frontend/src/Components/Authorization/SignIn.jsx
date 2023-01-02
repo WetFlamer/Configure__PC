@@ -46,7 +46,7 @@ const SignIn = () => {
       setStyle(styles.formBox);
     }
     if(token) {
-      window.location.href = "/configure";
+      window.location.href = "/configurator";
 
     }
   }, [token, successfully]);

@@ -4,11 +4,11 @@ const History = () => {
   return (
     <div className={styles.aboutBlock}>
       <div className={styles.title}>
-        MATRIX – один из лидеров рынка по сборке цифровой технике в России
+        MATRIX – один из лидеров рынка по сборке персональных компьютеров в России
       </div>
       <p className={styles.description}>
         Наша цель изменить жизнь людей, сделав простым доступ к огромному
-        количеству качественных и недорогих товаров, предоставляя лучший сервис.
+        количеству качественных и недорогих компьютеров, предоставляя лучший сервис.
       </p>
       <h3 className={styles.titleHistory}>Наша история</h3>
       <div className={styles.historyBlock}>
@@ -28,7 +28,7 @@ const History = () => {
           <h1 className={styles.historyTitle}>2022 г.</h1>
           <p className={styles.historyDescription}>
             Открытие магазинов в нескольких городах России и выход на рынок
-            Казахстана
+            Беркат
           </p>
         </div>
       </div>

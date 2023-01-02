@@ -1,0 +1,56 @@
+.main {
+    margin: auto;
+    height: 70vh;
+    width: 500px;
+
+}
+
+.first {
+    display: flex;
+}
+.image {
+    width: 120px;
+}
+
+.cost {
+    margin-top: 10px;
+    font-size: 30px;
+    color: rgb(179, 12, 12);
+}
+
+.btn {
+    border: none;
+    width: 93px;
+    height: 40px;
+    background-color: red;
+    border-radius: 5px;
+    color: white;
+
+    cursor: pointer;
+    font-size: 17px;
+    font-family: "Montserrat";
+}
+
+.btn:hover {
+    background-color: rgb(127, 120, 120);
+}
+
+.btn:active {
+    background-color: rgb(154, 144, 144);
+}
+
+.second {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.description {
+    height: 80px;
+    font-family: "PF DinDisplay Pro";
+    font-size: 20px;
+    line-height: 1.33;
+    color: #8490a4;
+    margin: 30px
+}
