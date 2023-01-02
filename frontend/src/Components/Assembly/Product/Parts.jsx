@@ -82,11 +82,6 @@ const Parts = ({
             </div>
           );
         }
-
-        if (item._id === hdd) {
-          return <div className={styles.acsBlockN}> <img className={styles.posterAcs} src={`/assets/images/${item.category.image_white}`} alt="" /><p className={styles.acsName}>{item.name}</p></div>
-
-        }
         return null;
       })}
       {ssd ? <p className={styles.acsTitle}>SSD:</p> : null}
