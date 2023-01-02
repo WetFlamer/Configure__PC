@@ -22,7 +22,7 @@ const Categories = () => {
   }
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className={styles.loader}></div>;
   }
 
   return (
