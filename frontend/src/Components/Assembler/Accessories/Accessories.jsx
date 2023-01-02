@@ -20,8 +20,8 @@ const Accessories = () => {
     }
 
     if (loading) {
-        return <div>Loading...</div>;
-    }
+        return <div className={styles.loader}></div>;
+      }    
 
     return (
         <div className={styles.main}>
