@@ -48,7 +48,6 @@ a {
   font-family: "Montserrat";
 }
 
-
 .navigationButton:hover {
   color: red;
   transition: 0.5s;
@@ -64,35 +63,52 @@ a {
 }
 
 .loginButton {
-  background-color: transparent;
-  border-radius: 10px;
-  border: 2px solid red;
-  width: 100px;
-  height: 50px;
-
+  text-decoration: none;
   color: white;
-
-  font-size: 20px;
-  font-family: "Montserrat";
+  display: inline-block;
+  background-color: rgb(36, 36, 36);
+  position: relative;
+  padding: 15px 30px;
+  border: 1px solid;
+  border-image: linear-gradient(180deg, #ff0000, #ff0400, #ff0000, #ff0000);
+  border-image-slice: 1;
+  margin: 10px 20px;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  overflow: hidden;
   cursor: pointer;
-  transition: 0.5s;
+  letter-spacing: 2px;
+  transition: 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.loginButton:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 0;
+  width: 100%;
+  z-index: -1;
+  color: white;
+  background: linear-gradient(180deg, #ff3000, #ed0200, #ff096c, #d50082);
+  transition: 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .loginButton:hover {
-  background-color: rgb(225, 11, 11);
-  border: 2px solid black;
-  color: black;
-  box-shadow: 1px 1px 1px 2px black;
-  transition: 0.5s;
+  background: red;
+}
+.loginButton:hover::before {
+  bottom: 0%;
+  top: auto;
+  height: 100%;
 }
 .cart {
-height: 30px;
-width: 30px;
-  background-image: url('../../images/icons/cart_white.png');
+  height: 30px;
+  width: 30px;
+  background-image: url("../../images/icons/cart_white.png");
   background-size: 100%;
   background-repeat: no-repeat;
-margin-right: 20px;
+  margin-right: 20px;
   cursor: pointer;
 }
 .cart:hover {
-  background-image: url('../../images/icons/cart_red.png');
+  background-image: url("../../images/icons/cart_red.png");
 }

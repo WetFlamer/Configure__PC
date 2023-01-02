@@ -1,4 +1,4 @@
-import React from "react";
+import React  from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { addAssemblytoCart } from "../../../features/usersSlice";
@@ -22,11 +22,13 @@ const Product = ({
 }) => {
   const dispatch = useDispatch();
   const loading = useSelector((state) => state.users.loading);
-  const handleAdd = () => {
+  const handleAdd = async () => {
     dispatch(
-      addAssemblytoCart({ userId: localStorage.getItem("id"), assemblyId: id })
+      await addAssemblytoCart({ userId: localStorage.getItem("id"), assemblyId: id })
     );
-  };
+  
+  }
+
   return (
     <div className={styles.productContainer}>
       <img
@@ -34,12 +36,12 @@ const Product = ({
         src={`/assets/images/assembly/${image}`}
         alt=""
       />
-      <div className={styles.title}>{name}</div>
+     <Link to={`/assembly/${id}`}> <div className={styles.title}>{name}</div></Link>
       <div className={styles.price}>{cost} ₽</div>
-      <button onClick={handleAdd} className={styles.buyButton}>
-        В корзину
-      </button>
 
+      <button  onClick={handleAdd} className={styles.buyButton}>
+            Купить
+          </button>
       <Link to={`/assembly/${id}`}><button className={styles.buttonMore}>Подробнее</button></Link>
       {loading === true ? <div className={styles.loader}></div> : null}
       <p className={styles.description}>{description}</p>

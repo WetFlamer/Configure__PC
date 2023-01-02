@@ -312,3 +312,15 @@ margin-top: 19%;
   color: #8490a4;
   padding-right: 0.875rem;
 }
+.buyButtonS {
+    border: none;
+    width: 93px;
+    height: 40px;
+    background-color: rgb(127, 120, 120);
+    border-radius: 5px;
+    color: white;
+  
+    cursor: pointer;
+    font-size: 17px;
+    font-family: "Montserrat";
+}
