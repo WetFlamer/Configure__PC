@@ -5,14 +5,17 @@ import styles from "./Cart.module.css";
 
 const CartItems = ({ id }) => {
   const assembles = useSelector((state) => state.assembles.assembles);
+  let sum = 0
+
+
   const dispatch = useDispatch();
   return (
     <>
       {assembles.map((assembly) => {
-          const handleDelete =  async () => {
-             await dispatch(deleteAssemblyfromCart({userId: localStorage.getItem('id'), assemblyId: assembly._id}));
-             dispatch(fetchCart({userId: localStorage.getItem('id')}));;
-              }
+        const handleDelete = async () => {
+          await dispatch(deleteAssemblyfromCart({ userId: localStorage.getItem('id'), assemblyId: assembly._id }));
+          dispatch(fetchCart({ userId: localStorage.getItem('id') }));;
+        }
         if (assembly._id === id) {
           return (
             <div className={styles.basket_itemBox}>

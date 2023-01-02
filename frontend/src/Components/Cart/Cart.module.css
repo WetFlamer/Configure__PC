@@ -92,6 +92,7 @@
 }
 .globalPrice {
   color: white;
+  display: flex;
 }
 .buttonBuy {
   background-color: #a50d0d;
@@ -153,3 +154,8 @@
      left: unset;
     }
    }
+
+.totalCost {
+  color: rgb(131, 0, 0);
+  margin-left: 30px;
+}

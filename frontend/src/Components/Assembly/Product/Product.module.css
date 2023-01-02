@@ -9,6 +9,7 @@
   width: 277px;
   box-sizing: content-box;
 }
+
 .poster {
   display: flex;
   margin-top: -2.125rem;
@@ -17,6 +18,7 @@
   width: 220px;
   height: 220px;
 }
+
 .title {
   font-size: 20px;
   line-height: 1px;
@@ -24,15 +26,18 @@
   color: white;
   cursor: pointer;
 }
+
 .title:hover {
   color: rgb(206, 15, 15);
 }
+
 .price {
   margin-top: 20px;
   font-size: 20px;
 
   color: rgb(179, 12, 12);
 }
+
 .buyButton {
   border: none;
   width: 93px;
@@ -45,9 +50,15 @@
   font-size: 17px;
   font-family: "Montserrat";
 }
+
 .buyButton:hover {
   background-color: rgb(127, 120, 120);
 }
+
+.buyButton:active {
+  background-color: rgb(154, 144, 144);
+}
+
 .buttonMore {
   border: none;
   width: 99px;
@@ -59,11 +70,14 @@
   font-family: "Montserrat";
   background-color: rgb(58, 57, 57);
 }
+
 .buttonMore:hover {
   background-color: rgb(69, 68, 68);
 }
+
 .description {
   width: 272px;
+  height: 80px;
   font-family: "PF DinDisplay Pro";
   font-size: 0.75rem;
   line-height: 1.33;
@@ -71,8 +85,10 @@
   margin-bottom: 1rem;
   margin-top: 5%;
 }
+
 .line {
-  border-bottom: 1px solid #f00; /* Параметры линии */
+  border-bottom: 1px solid #f00;
+  /* Параметры линии */
 }
 
 .acsTitle {
@@ -84,6 +100,7 @@
 
   margin-top: 4%;
 }
+
 .acsName {
   font-size: 16px;
   line-height: 1;
@@ -98,13 +115,16 @@
   margin-top: 3%;
   margin-left: 1%;
 }
+
 .posterAcs {
   width: 35px;
   height: 35px;
 }
+
 .acsBlockN {
   display: flex;
 }
+
 .loader {
   --height-of-loader: 4px;
   --loader-color: #0071e2;
@@ -153,13 +173,16 @@
     left: unset;
   }
 }
+
 .detalic {
   display: flex;
 }
+
 .detalicTitle {
   width: 50%;
   align-items: flex-start;
 }
+
 .matrix {
   font-weight: normal;
   font-size: 1.5rem;
@@ -167,6 +190,7 @@
   color: #c50e0e;
   margin-bottom: 0.5rem;
 }
+
 .detalicName {
   font-weight: normal;
   font-size: 4rem;
@@ -177,6 +201,7 @@
   font-family: "Montserrat";
   color: white;
 }
+
 .detalicDescription {
   font-family: "PF DinDisplay Pro";
   font-size: 1.5rem;
@@ -185,6 +210,7 @@
   max-width: 33.4375rem;
   margin: 0 0 4rem;
 }
+
 .buttonSection {
   display: flex;
   flex-wrap: wrap;
@@ -202,14 +228,17 @@
   font-size: 17px;
   font-family: "Montserrat";
 }
+
 .buyButton2:hover {
   background-color: rgb(127, 120, 120);
 }
+
 .priceBox {
   display: block;
   margin-bottom: 2rem;
   margin-left: 1.5rem;
 }
+
 .detalicPrice {
   display: flex;
   align-items: flex-start;
@@ -220,16 +249,19 @@
   letter-spacing: 0.03em;
   color: #e20000;
 }
+
 .detalicPriceImage {
   width: 30px;
   height: 30px;
   margin-top: 13.5px;
   margin-left: 10px;
 }
+
 .detalicPoster {
   width: 600px;
   height: 600px;
 }
+
 .detalicTit {
   font-weight: normal;
   font-family: "Montserrat";
@@ -240,14 +272,17 @@
   margin-bottom: 1.5rem;
   margin-top: 24%;
 }
+
 .detalicWrapper {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
 }
+
 .detailBLOCK {
   display: block;
 }
+
 .listItem {
   display: flex;
   align-items: center;
@@ -256,6 +291,7 @@
   border-bottom: 1px dashed #56617c;
   font-family: "PF DinDisplay Pro";
 }
+
 .listCategory {
   font-size: 1.25rem;
   line-height: 1.4;
@@ -266,6 +302,7 @@
   text-overflow: ellipsis;
   margin-right: 1rem;
 }
+
 .catImage {
   width: 24px;
   height: 24px;
@@ -275,39 +312,45 @@
   font-size: 0;
   margin-right: 5rem;
 }
+
 .detailName {
   font-size: 1.25rem;
   line-height: 1.4;
   color: #c3cee1;
   margin-top: 5px;
 }
+
 .detailBox {
   display: flex;
 }
+
 .features {
   list-style: none;
   padding: 1.75rem 2.5rem;
   background: #1c232e;
   width: 27.5rem;
   height: 490px;
-margin-top: 19%;
-  margin-left: 40%;
+  margin: 240px 0px 200px 450px;
 }
+
 .featuresLi {
   width: 100%;
   display: flex;
   align-items: center;
   padding: 0.75rem 0;
 }
+
 .featuresImgBox {
   font-size: 0;
   width: 5rem;
   margin-right: 1.5rem;
 }
+
 .compass {
   width: 80px;
   height: 80px;
 }
+
 .featuresText {
   font-size: 1.5rem;
   line-height: 1.17;
@@ -315,15 +358,16 @@ margin-top: 19%;
   color: #8490a4;
   padding-right: 0.875rem;
 }
+
 .buyButtonS {
-    border: none;
-    width: 93px;
-    height: 40px;
-    background-color: rgb(127, 120, 120);
-    border-radius: 5px;
-    color: white;
-  
-    cursor: pointer;
-    font-size: 17px;
-    font-family: "Montserrat";
+  border: none;
+  width: 93px;
+  height: 40px;
+  background-color: rgb(127, 120, 120);
+  border-radius: 5px;
+  color: white;
+
+  cursor: pointer;
+  font-size: 17px;
+  font-family: "Montserrat";
 }

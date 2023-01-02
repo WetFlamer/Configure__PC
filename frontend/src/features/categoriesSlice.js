@@ -24,9 +24,7 @@ export const fetchCategories = createAsyncThunk(
   }
 );
 export const setCategory = createAsyncThunk('setCategory', ({ id }, _) => {
-
   return id
-
 });
 
 const categoriesSlice = createSlice({
@@ -36,7 +34,6 @@ const categoriesSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(setCategory.fulfilled, (state, action) => {
-        console.log(state.category);
         state.category = action.payload;
       }
       )
