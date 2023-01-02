@@ -153,7 +153,7 @@
   display: flex;
 }
 .detalicTitle {
-  width: 100%;
+  width: 50%;
   align-items: flex-start;
 }
 .matrix {
@@ -223,7 +223,6 @@
   margin-left: 10px;
 }
 .detalicPoster {
-  margin-right: 400px;
   width: 600px;
   height: 600px;
 }
@@ -288,7 +287,7 @@
   width: 27.5rem;
   height: 490px;
 margin-top: 19%;
-  margin-left: 98%;
+  margin-left: 40%;
 }
 .featuresLi {
   width: 100%;
