@@ -14,15 +14,15 @@ const Parts = ({
   const accessory = useSelector((state) => state.accessories.acs);
   return (
     <div>
-     <div>
-     <p className={styles.acsTitle}>Видео-карта:</p>
-      {accessory.map((item) => {
-        if (item._id === graphics) {
-          return <div className={styles.acsBlockN}> <img className={styles.posterAcs} src={`/assets/images/${item.category.image_white}`} alt="" /><p className={styles.acsName}>{item.name}</p></div>
-        }
-        return null;
-      })}
-     </div>
+      <div>
+        <p className={styles.acsTitle}>Видео-карта:</p>
+        {accessory.map((item) => {
+          if (item._id === graphics) {
+            return <div className={styles.acsBlockN}> <img className={styles.posterAcs} src={`/assets/images/${item.category.image_white}`} alt="" /><p className={styles.acsName}>{item.name}</p></div>
+          }
+          return null;
+        })}
+      </div>
       <p className={styles.acsTitle}>Процессор:</p>
       {accessory.map((item) => {
         if (item._id === processor) {
@@ -50,10 +50,10 @@ const Parts = ({
         if (item._id === ssd) {
           return <div className={styles.acsBlockN}> <img className={styles.posterAcs} src={`/assets/images/${item.category.image_white}`} alt="" /><p className={styles.acsName}>{item.name}</p></div>
         }
-        if(item._id === hdd) {
+        if (item._id === hdd) {
           return <div className={styles.acsBlockN}> <img className={styles.posterAcs} src={`/assets/images/${item.category.image_white}`} alt="" /><p className={styles.acsName}>{item.name}</p></div>
 
-        } 
+        }
         return null;
       })}
       <p className={styles.acsTitle}>Блок питания:</p>

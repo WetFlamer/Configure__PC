@@ -3,7 +3,11 @@
     color: gray;
 }
 .accessory {
-    font-size: 22px;
+    font-size: 24px;
     color: gray;
+    margin: 0px 0px 20px 20px;
+}
+.radioInput {
+    margin: 0px 20px 0px 0px;
 
 }

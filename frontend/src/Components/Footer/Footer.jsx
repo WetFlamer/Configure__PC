@@ -5,8 +5,6 @@ import inst from "../../images/icons/instagram.png";
 import twitter from "../../images/icons/twitter.png";
 import yt from "../../images/icons/youtube.png";
 import git from "../../images/icons/git.png";
-import { Link } from "react-router-dom";
-import Map from "./MapPage/Map";
 
 const Footer = () => {
   return (

@@ -23,7 +23,6 @@ function App() {
         <Route path="/assembly" element={<Assembly />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="assembly/:id" element={<Fullstory />} />
-        <Route path="/map" element={<Map />} />
         {token ? <Route path="/login" element={<Navigate to={"/configure"} />} /> : <Route path="/login" element={<SignIn />} />}
       </Routes>
 
