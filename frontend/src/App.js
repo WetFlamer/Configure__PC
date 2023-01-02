@@ -16,7 +16,7 @@ function App() {
       <Header />
 
       <Routes>
-      <Route path="/cart" element={<Cart />} />
+      {token ?  <Route path="/cart" element={<Cart />} /> :  <Route path="/cart" element={<Navigate to={'/configure'}/>} />}
         <Route path="/" element={<Navigate to={"/configure"} />} />
         <Route path="/configure" element={<Assembler />} />
         <Route path="/assembly" element={<Assembly />} />
