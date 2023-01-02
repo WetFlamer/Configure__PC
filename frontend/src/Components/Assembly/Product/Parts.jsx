@@ -11,7 +11,7 @@ const Parts = ({
   graphics,
 }) => {
   const accessory = useSelector((state) => state.accessories.acs);
-  const categories = useSelector((state) => state.categories.categories);
+  // const categories = useSelector((state) => state.categories.categories);
   return (
     <div>
      <div>

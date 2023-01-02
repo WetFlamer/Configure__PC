@@ -11,6 +11,7 @@ const Contacts = () => {
           height="385"
           property="intoned"
           frameborder="0"
+          title="myFrame"
         ></iframe>
       </div>
     </div>
