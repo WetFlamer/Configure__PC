@@ -4,6 +4,7 @@ import AboutUs from "./Components/AboutUs/AboutUs";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import SignIn from "./Components/Authorization/SignIn";
+import Map from "./Components/Footer/MapPage/Map";
 import { useSelector } from "react-redux";
 import Assembly from "./Components/Assembly/Assembly";
 import Cart from "./Components/Cart/Cart";
