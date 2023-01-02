@@ -1,25 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Andika:regular,italic,700,700italic");
 
-.contacts {
-  margin-top: 50px;
-  width: 50%;
-  height: 60%;
-  padding-top: 5px;
-  padding-left: 10px;
-  margin-left: 0.5%;
-  border-radius: 5px;
-  background-color: transparent;
-
-}
-.contactsTitle {
-color: white;
-  font-family: "Andika", sans-serif;
-}
-.mapTitle {
-  color: white;;
-  font-family: "Andika", sans-serif;
-}
-
 .about {
   display: flex;
   background-image: url("../../images/background.jpg");
@@ -27,12 +7,11 @@ color: white;
   height: 835px;
 }
 .aboutBlock {
-  margin-top: 50px;
+  margin: auto;
   width: 50%;
   height: 60%;
   padding-top: 5px;
   padding-left: 10px;
-  margin-left: 5%;
   border-radius: 10px;
   background-color: transparent;
 }
@@ -88,35 +67,4 @@ color: white;
 color: white;
   padding-left: 20px;
   padding-top: 10px;
-}
-
-@media (max-width: 992px) {
-  .about {
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    transition: 0.5s;
-  }
-  .aboutBlock {
-    margin-top: 0.5%;
-    margin-left: 0;
-    width: 50%;
-    height: 30%;
-  }
-  .title {
-    font-size: 15px;
-  }
-  .description {
-    font-size: 15px;
-  }
-  .titleHistory {
-    font-size: 20px;
-  }
-  .historyTitle {
-    font-size: 15px;
-  }
-  .historyDescription {
-    font-size: 12px;
-  }
 }

@@ -73,6 +73,7 @@
 .line {
   border-bottom: 1px solid #f00; /* Параметры линии */
 }
+
 .acsTitle {
   font-family: "Montserrat";
   font-size: 0.75rem;
@@ -310,4 +311,16 @@ margin-top: 19%;
   text-transform: uppercase;
   color: #8490a4;
   padding-right: 0.875rem;
+}
+.buyButtonS {
+    border: none;
+    width: 93px;
+    height: 40px;
+    background-color: rgb(127, 120, 120);
+    border-radius: 5px;
+    color: white;
+  
+    cursor: pointer;
+    font-size: 17px;
+    font-family: "Montserrat";
 }

@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Product from "./Product/Product";
 import { fetchAcs } from "../../features/accessoriesSlice";
 import { fetchCategories } from "../../features/categoriesSlice";
+import { fetchCart } from "../../features/usersSlice";
 
 const Assembly = () => {
   const assembles = useSelector((state) => state.assembles.assembles);
@@ -11,6 +12,7 @@ const Assembly = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchAcs());
+    dispatch(fetchCart({userId: localStorage.getItem('id') }))
     dispatch(fetchCategories());
   }, [dispatch]);
   return (
@@ -21,6 +23,7 @@ const Assembly = () => {
         ) : (
           assembles.map((item) => {
             return (
+              
               <Product
                 key={item._id}
                 id={item._id}
