@@ -15,6 +15,9 @@ module.exports.usersController = {
   login: async (req, res) => {
     try {
       const { login, password } = req.body;
+      if(login.length === 0 ){
+        return res.status(401).json({ error: 'Имя пользователя не должно быть пустым'})
+      }
       const errors = validationResult(req);
       const candidate = await User.findOne({ login });
 
@@ -52,6 +55,12 @@ module.exports.usersController = {
   },
 
   register: async (req, res) => {
+    const { login, password } = req.body;
+    if (login.length === 0) {
+      return res
+        .status(401)
+        .json({ error: "Имя пользователя не должно быть пустым" });
+    }
     try {
       const errors = validationResult(req);
       if (!errors.isEmpty()) {
@@ -59,7 +68,7 @@ module.exports.usersController = {
           error: "Пароль должен быть больше 4 или меньше 10 символов",
         });
       }
-      const { login, password } = req.body;
+
       const candidate = await User.findOne({ login });
       if (candidate) {
         return res
