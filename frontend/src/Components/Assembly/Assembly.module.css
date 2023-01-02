@@ -12,6 +12,7 @@
     padding: 30px 10px 30px 30px;
     width: 100vw;
     display: flex;
+    flex-wrap: wrap;
 }
 .loader {
     --height-of-loader: 4px;
