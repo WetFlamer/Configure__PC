@@ -32,7 +32,7 @@ const Header = () => {
             };
           }}
           className={styles.navigationButton}
-          to="/configure"
+          to="/configurator"
         >
           Собрать
         </NavLink>
