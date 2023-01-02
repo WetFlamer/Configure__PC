@@ -5,6 +5,8 @@ import inst from "../../images/icons/instagram.png";
 import twitter from "../../images/icons/twitter.png";
 import yt from "../../images/icons/youtube.png";
 import git from "../../images/icons/git.png";
+import { Link } from "react-router-dom";
+import Map from "./MapPage/Map";
 
 const Footer = () => {
   return (
@@ -13,7 +15,11 @@ const Footer = () => {
         <div className={styles.container}>
           <div className={styles.wrapper_1}>
             <h4 className={styles.h4}>Оставайтесь на связи</h4>
-            <h5>г. Грозный, улица Трошева 7, ТД «Медина», 3 этаж, 1 кабинет</h5>
+            <h5>
+              <Link to="/map" element={<Map />}>
+                г. Грозный, улица Трошева 7, ТД «Медина», 3 этаж, 1 кабинет
+              </Link>{" "}
+            </h5>
             <br />
             <p>Обработка и прием заказов по телефону:</p>
             <br />
