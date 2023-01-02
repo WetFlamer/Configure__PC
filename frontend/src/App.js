@@ -6,37 +6,23 @@ import Footer from "./Components/Footer/Footer";
 import SignIn from "./Components/Authorization/SignIn";
 import { useSelector } from "react-redux";
 import Assembly from "./Components/Assembly/Assembly";
+import Cart from "./Components/Cart/Cart";
+import { Fullstory } from "./Components/Assembly/Product/Fullstory";
 
 function App() {
   const token = useSelector((state) => state.users.token);
-
-  if (!token) {
-    return (
-      <>
-        <Header />
-
-        <Routes>
-          <Route path="/" element={<Navigate to={"/configure"} />} />
-          <Route path="/configure" element={<Assembler />} />
-          <Route path="/assembly" element={<Assembly />} />
-          <Route path="/about" element={<AboutUs />} />
-          <Route path="/login" element={<SignIn />} />
-        </Routes>
-
-        <Footer />
-      </>
-    );
-  }
   return (
     <>
       <Header />
 
       <Routes>
+      {token ?  <Route path="/cart" element={<Cart />} /> :  <Route path="/cart" element={<Navigate to={'/configure'}/>} />}
         <Route path="/" element={<Navigate to={"/configure"} />} />
-        <Route path="/configure" element={<Assembler />} />
+        <Route path="/configurator" element={<Assembler />} />
         <Route path="/assembly" element={<Assembly />} />
         <Route path="/about" element={<AboutUs />} />
-        <Route path="/login" element={<Navigate to={"/configure"} />} />
+        <Route path="assembly/:id" element={<Fullstory />} />
+        {token ? <Route path="/login" element={<Navigate to={"/configure"} />} /> : <Route path="/login" element={<SignIn />} />}
       </Routes>
 
       <Footer />

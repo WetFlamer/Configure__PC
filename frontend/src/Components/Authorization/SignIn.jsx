@@ -100,9 +100,9 @@ const SignIn = () => {
                 Войти
               </button>
             </p>
-            <p>
-              <a href="/" className={styles.formForgot}>
-                Восстановить пароль
+            <p className={styles.formForgot}>
+              <a href="/" >
+                Забыли пароль?
               </a>
             </p>
             <p className={styles.error}>
@@ -127,7 +127,7 @@ const SignIn = () => {
             action="#"
             className={styles.formSignUp}
           >
-            <h3 className={styles.formTitle}>Регистрации</h3>
+            <h3 className={styles.formTitle}>Регистрация</h3>
 
             <p>
               <input

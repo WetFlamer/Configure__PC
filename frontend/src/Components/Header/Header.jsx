@@ -1,16 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./Header.module.css";
 import logo from "../../images/logo.png";
 import { NavLink } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchAssembles } from "../../features/assemblesSlice";
 
 const Header = () => {
+  const dispatch = useDispatch();
+
   const token = useSelector((state) => state.users.token);
   const handleExit = () => {
     localStorage.clear()
     window.location.reload()
   }
-
+  useEffect (() => {
+    dispatch(fetchAssembles());
+  }, [dispatch])
   return (
     <div className={styles.header}>
       <div className={styles.logoBlock}>
@@ -27,7 +32,7 @@ const Header = () => {
             };
           }}
           className={styles.navigationButton}
-          to="/configure"
+          to="/configurator"
         >
           Собрать
         </NavLink>
@@ -60,6 +65,9 @@ const Header = () => {
       </div>
       {token ? (
         <div className={styles.loginBlock}>
+          <NavLink to={"/cart"}>
+            <div className={styles.cart}></div>
+          </NavLink>
             <button onClick={handleExit} className={styles.loginButton}>Выйти</button>
         </div>
       ) : (
@@ -67,8 +75,10 @@ const Header = () => {
           <NavLink to={"/login"}>
             <button className={styles.loginButton}>Войти</button>
           </NavLink>
+        
         </div>
       )}
+      
     </div>
   );
 };

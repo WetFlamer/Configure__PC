@@ -1,0 +1,155 @@
+.main {
+  font-family: "Montserrat";
+  font-weight: 600;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(../../images/plataFon.jpg);
+  display: flex;
+}
+
+.bg {
+  background-color: rgb(36, 36, 36);
+  margin: 20px 20px 100px 20px;
+  padding: 30px 10px 30px 30px;
+  width: 100vw;
+}
+.title {
+  color: white;
+  font-size: 50px;
+  margin-left: 41%;
+}
+.basket_start {
+  margin-top: 5rem;
+  width: -webkit-calc(100% - 31.25rem);
+  width: calc(100% - 31.25rem);
+  max-width: 55rem;
+  margin-bottom: 4rem;
+  z-index: 2;
+}
+.basket_title {
+  font-size: 2rem;
+  line-height: 1.25;
+  color: #fff;
+  margin-bottom: 2.5rem;
+}
+.basket_itemBox {
+  margin-top: -1rem;
+  margin-bottom: 2.5rem;
+}
+.basket_item {
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 1px dashed #56617c;
+  padding: 1rem 0;
+  width: 100%;
+  position: relative;
+}
+.basket_itemCard {
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: -webkit-calc(100% - 18.5rem);
+  width: calc(100% - 18.5rem);
+}
+.basket_ItemImage {
+  display: flex;
+  width: 5rem;
+  height: 5rem;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.basket_itemName {
+  font-size: 1.5rem;
+  line-height: 1;
+  color: #fff;
+  margin-left: 2.5rem;
+}
+.itemPrice {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  font-weight: bold;
+  color: #a50d0d;
+}
+.costImage {
+  width: 25px;
+  height: 25px;
+}
+.globalPrice {
+  color: white;
+}
+.buttonBuy {
+  background-color: #a50d0d;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-family: "Montserrat";
+  width: 100px;
+  height: 35px;
+  cursor: pointer;
+}
+.buttonBuy:hover {
+  background-color: #56617c;
+}
+.buttonDelete {
+  width: 50px;
+  height: 35px;
+
+  background-color: #a50d0d;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+}
+.buttonDelete:hover {
+    background-color: #56617c;
+  }
+  .loader {
+    --height-of-loader: 4px;
+    --loader-color: #0071e2;
+    width: 60%;
+    height: var(--height-of-loader);
+    border-radius: 30px;
+    background-color: rgba(0,0,0,0.2);
+    position: relative;
+   }
+   
+   .loader::before {
+    content: "";
+    position: absolute;
+    background: var(--loader-color);
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    border-radius: 30px;
+    animation: moving 1s ease-in-out infinite;
+    ;
+   }
+   
+   @keyframes moving {
+    50% {
+     width: 100%;
+    }
+   
+    100% {
+     width: 0;
+     right: 0;
+     left: unset;
+    }
+   }
