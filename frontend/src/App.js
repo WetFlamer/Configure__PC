@@ -17,13 +17,14 @@ function App() {
       <Header />
 
       <Routes>
-      {token ?  <Route path="/cart" element={<Cart />} /> :  <Route path="/cart" element={<Navigate to={'/configure'}/>} />}
-        <Route path="/" element={<Navigate to={"/configure"} />} />
+      {token ?  <Route path="/cart" element={<Cart />} /> :  <Route path="/cart" element={<Navigate to={'/configurator'}/>} />}
+        <Route path="/" element={<Navigate to={"/configurator"} />} />
         <Route path="/configurator" element={<Assembler />} />
         <Route path="/assembly" element={<Assembly />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="assembly/:id" element={<Fullstory />} />
-        {token ? <Route path="/login" element={<Navigate to={"/configure"} />} /> : <Route path="/login" element={<SignIn />} />}
+        <Route path="map" element={<Map/>} />
+        {token ? <Route path="/login" element={<Navigate to={"/configurator"} />} /> : <Route path="/login" element={<SignIn />} />}
       </Routes>
 
       <Footer />
