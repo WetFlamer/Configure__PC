@@ -103,7 +103,7 @@ const Fullstory = () => {
                                   src={`/assets/images/${acs.category.image_white}`}
                                   alt="poster"
                                 />
-                                <p className={styles.detailName}>{acs.name.length > 1 ? acs.name.slice(0, 21) + "..." : acs.name}</p>
+                                <p className={styles.detailName}>{acs.name.length > 1 ? acs.name.slice(0, 26) + "..." : acs.name}</p>
                               </div>
                             );
                           }
@@ -123,7 +123,7 @@ const Fullstory = () => {
                                   src={`/assets/images/${acs.category.image_white}`}
                                   alt="poster"
                                 />
-                                <p className={styles.detailName}>{acs.name}</p>
+                                <p className={styles.detailName}>{acs.name.length > 1 ? acs.name.slice(0, 25) + "..." : acs.name}</p>
                               </div>
                             );
                           }
@@ -141,7 +141,7 @@ const Fullstory = () => {
                                   src={`/assets/images/${acs.category.image_white}`}
                                   alt="poster"
                                 />
-                                <p className={styles.detailName}>{acs.name.length > 1 ? acs.name.slice(0, 21) + "..." : acs.name}</p>
+                                <p className={styles.detailName}>{acs.name.length > 1 ? acs.name.slice(0, 23) + "..." : acs.name}</p>
                               </div>
                             );
                           }
@@ -161,7 +161,7 @@ const Fullstory = () => {
                                     alt="poster"
                                   />
                                   <p className={styles.detailName}>
-                                    {acs.name}
+                                  {acs.name.length > 1 ? acs.name.slice(0, 23) + "..." : acs.name}
                                   </p>
                                 </div>
                               );

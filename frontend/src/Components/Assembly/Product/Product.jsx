@@ -12,7 +12,7 @@ const Product = ({
   hdd,
   name,
   processor,
-  motherboard,
+  motherboard, 
   ram,
   power,
   compCase,
