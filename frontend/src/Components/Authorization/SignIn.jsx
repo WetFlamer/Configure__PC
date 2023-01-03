@@ -29,9 +29,10 @@ const SignIn = () => {
     setStyle(styles.formBoxActive);
     setBgStyle(styles.loginBlockActive);
   };
-
   const dispatch = useDispatch();
-
+  const handleMusic = () => {
+    document.querySelector("audio").play();
+  };
   const handleLogin = async (e) => {
     e.preventDefault();
     await dispatch(authSignIn({ login, password }));
@@ -45,14 +46,17 @@ const SignIn = () => {
     if (successfully) {
       setStyle(styles.formBox);
     }
-    if(token) {
+    if (token) {
       window.location.href = "/configurator";
-
     }
   }, [token, successfully]);
 
   return (
     <div className={bgStyle}>
+      <audio>
+        <source src="/assets/audio/1.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
       {/* Контейнер */}
       <article className={styles.container}>
         {/* Внутренний блок */}
@@ -101,7 +105,10 @@ const SignIn = () => {
               </button>
             </div>
             <div className={styles.formForgot}>
-              <a target='_blank' rel='noreferrer' href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" >
+              {/* <a target='_blank' rel='noreferrer' href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" >
+                Забыли пароль?
+              </a> */}
+              <a onClick={handleMusic} href="#">
                 Забыли пароль?
               </a>
             </div>
@@ -121,6 +128,7 @@ const SignIn = () => {
               </div>
             ) : null}
           </form>
+
           {/* Форма регистрации  */}
           <form
             onSubmit={handleRegister}
