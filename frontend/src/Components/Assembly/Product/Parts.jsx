@@ -19,7 +19,7 @@ const Parts = ({
         {accessory.map((item) => {
           if (item._id === graphics) {
             return (
-              <div className={styles.acsBlockN}>
+              <div key={item._id} className={styles.acsBlockN}>
                 {" "}
                 <img
                   className={styles.posterAcs}
@@ -37,7 +37,7 @@ const Parts = ({
       {accessory.map((item) => {
         if (item._id === processor) {
           return (
-            <div className={styles.acsBlockN}>
+            <div key={item._id} className={styles.acsBlockN}>
               {" "}
               <img
                 className={styles.posterAcs}
@@ -54,7 +54,7 @@ const Parts = ({
       {accessory.map((item) => {
         if (item._id === ram) {
           return (
-            <div className={styles.acsBlockN}>
+            <div key={item._id} className={styles.acsBlockN}>
               {" "}
               <img
                 className={styles.posterAcs}
@@ -71,7 +71,7 @@ const Parts = ({
       {accessory.map((item) => {
         if (item._id === motherboard) {
           return (
-            <div className={styles.acsBlockN}>
+            <div key={item._id} className={styles.acsBlockN}>
               {" "}
               <img
                 className={styles.posterAcs}
@@ -89,7 +89,7 @@ const Parts = ({
         ? accessory.map((item) => {
             if (item._id === ssd) {
               return (
-                <div className={styles.acsBlockN}>
+                <div key={item._id} className={styles.acsBlockN}>
                   {" "}
                   <img
                     className={styles.posterAcs}
@@ -108,7 +108,7 @@ const Parts = ({
         ? accessory.map((item) => {
             if (item._id === hdd) {
               return (
-                <div className={styles.acsBlockN}>
+                <div key={item._id} className={styles.acsBlockN}>
                   {" "}
                   <img
                     className={styles.posterAcs}
@@ -126,7 +126,7 @@ const Parts = ({
       {accessory.map((item) => {
         if (item._id === power) {
           return (
-            <div className={styles.acsBlockN}>
+            <div key={item._id} className={styles.acsBlockN}>
               {" "}
               <img
                 className={styles.posterAcs}
@@ -143,7 +143,7 @@ const Parts = ({
       {accessory.map((item) => {
         if (item._id === compCase) {
           return (
-            <div className={styles.acsBlockN}>
+            <div key={item._id} className={styles.acsBlockN}>
               {" "}
               <img
                 className={styles.posterAcs}

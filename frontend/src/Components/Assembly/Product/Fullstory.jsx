@@ -40,7 +40,7 @@ const Fullstory = () => {
         {assembles.map((item) => {
           if (item._id === id) {
             return (
-              <div className={styles.detalic}>
+              <div key={item._id} className={styles.detalic}>
                 <div className={styles.detalicTitle}>
                   <div className={styles.matrix}>MATRIX</div>
                   <h1 className={styles.detalicName}>{item.name}</h1>
@@ -79,7 +79,7 @@ const Fullstory = () => {
                         {accesory.map((acs) => {
                           if (acs._id === item.graphics) {
                             return (
-                              <div className={styles.detailBox}>
+                              <div key={item._id} className={styles.detailBox}>
                                 <img
                                   className={styles.catImage}
                                   src={`/assets/images/${acs.category.image_white}`}
@@ -97,7 +97,7 @@ const Fullstory = () => {
                         {accesory.map((acs) => {
                           if (acs._id === item.processor) {
                             return (
-                              <div className={styles.detailBox}>
+                              <div key={item._id} className={styles.detailBox}>
                                 <img
                                   className={styles.catImage}
                                   src={`/assets/images/${acs.category.image_white}`}
@@ -117,7 +117,7 @@ const Fullstory = () => {
                         {accesory.map((acs) => {
                           if (acs._id === item.ram) {
                             return (
-                              <div className={styles.detailBox}>
+                              <div key={item._id} className={styles.detailBox}>
                                 <img
                                   className={styles.catImage}
                                   src={`/assets/images/${acs.category.image_white}`}
@@ -135,7 +135,7 @@ const Fullstory = () => {
                         {accesory.map((acs) => {
                           if (acs._id === item.motherboard) {
                             return (
-                              <div className={styles.detailBox}>
+                              <div key={item._id} className={styles.detailBox}>
                                 <img
                                   className={styles.catImage}
                                   src={`/assets/images/${acs.category.image_white}`}
@@ -154,7 +154,7 @@ const Fullstory = () => {
                           {accesory.map((acs) => {
                             if (acs._id === item.ssd) {
                               return (
-                                <div className={styles.detailBox}>
+                                <div key={item._id} className={styles.detailBox}>
                                   <img
                                     className={styles.catImage}
                                     src={`/assets/images/${acs.category.image_white}`}
@@ -176,7 +176,7 @@ const Fullstory = () => {
                           {accesory.map((acs) => {
                             if (acs._id === item.hdd) {
                               return (
-                                <div className={styles.detailBox}>
+                                <div key={item._id} className={styles.detailBox}>
                                   <img
                                     className={styles.catImage}
                                     src={`/assets/images/${acs.category.image_white}`}
@@ -197,7 +197,7 @@ const Fullstory = () => {
                         {accesory.map((acs) => {
                           if (acs._id === item.power) {
                             return (
-                              <div className={styles.detailBox}>
+                              <div key={item._id} className={styles.detailBox}>
                                 <img
                                   className={styles.catImage}
                                   src={`/assets/images/${acs.category.image_white}`}
@@ -215,7 +215,7 @@ const Fullstory = () => {
                         {accesory.map((acs) => {
                           if (acs._id === item.compCase) {
                             return (
-                              <div className={styles.detailBox}>
+                              <div key={item._id} className={styles.detailBox}>
                                 <img
                                   className={styles.catImage}
                                   src={`/assets/images/${acs.category.image_white}`}

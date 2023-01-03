@@ -23,10 +23,9 @@ const Cart = () => {
   return (
     <div className={styles.main}>
       <div className={styles.bg}>
-        <h1 className={styles.title}>Корзина</h1>
+        <div>{cart.length === 3 ? <div className={styles.titleFalse}>Корзина пуста</div> : (<div className={styles.title}>Корзина</div>)}</div>
         <div className={styles.basket_start}>
-          <p className={styles.basket_title}>Корзина</p>
-          {loading ? <div className={styles.loader}></div> : cart.length === 0 ? <h1 className={styles.basket_title}>Корзина пуста</h1> : cart.map((item) => { return (<CartItems id={item} />) })}
+          {loading ? <div className={styles.loader}></div> : cart.map((item) => { return  (<CartItems id={item} />) })}
           <h1 className={styles.globalPrice}>Общая стоимость: <div className={styles.totalCost}>{sum} <img
             className={styles.costImage}
             src="/assets/images/cost.png"
