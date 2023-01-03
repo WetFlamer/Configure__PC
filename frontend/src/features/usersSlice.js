@@ -130,7 +130,7 @@ export const deleteAssemblyfromCart = createAsyncThunk(
 const usersSlice = createSlice({
   name: "users",
   initialState,
-  reducers: {},
+  reducers:{},
   extraReducers: (builder) => {
     builder
       .addCase(authSignIn.pending, (state) => {
