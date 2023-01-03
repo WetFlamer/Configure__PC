@@ -5,9 +5,6 @@ import styles from "./Cart.module.css";
 
 const CartItems = ({ id }) => {
   const assembles = useSelector((state) => state.assembles.assembles);
-  let sum = 0
-
-
   const dispatch = useDispatch();
   return (
     <>

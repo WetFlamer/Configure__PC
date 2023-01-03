@@ -16,9 +16,8 @@ const Fullstory = () => {
   }, [dispatch]);
   const [inCart, setInCart] = useState(false);
   const cart = useSelector((state) => state.users.cart) 
-  const token = useSelector((state) => state.users.token)
   useEffect(() => {
-    if(token) {
+    if(cart) {
       cart.map((assembly) => {
         if (assembly === id) {
          return setInCart(true)
@@ -56,7 +55,7 @@ const Fullstory = () => {
       ) : 
         cart ? <button  onClick={handleAdd} className={styles.buyButton2}>
         Купить
-      </button> : <button  className={styles.buyButton}>
+      </button> : <button  className={styles.buyButton2}>
           Купить
         </button>
       }

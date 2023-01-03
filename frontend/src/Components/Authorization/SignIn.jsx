@@ -105,9 +105,6 @@ const SignIn = () => {
               </button>
             </div>
             <div className={styles.formForgot}>
-              {/* <a target='_blank' rel='noreferrer' href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" >
-                Забыли пароль?
-              </a> */}
               <a onClick={handleMusic} href="#">
                 Забыли пароль?
               </a>
