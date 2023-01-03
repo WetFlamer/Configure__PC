@@ -31,7 +31,8 @@ const Cart = () => {
             className={styles.costImage}
             src="/assets/images/cost.png"
             alt=""
-          /></div></h1>
+          /></div>
+          </h1>
         </div>
       </div>
     </div>
