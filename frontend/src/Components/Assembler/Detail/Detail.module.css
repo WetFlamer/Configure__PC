@@ -8,9 +8,23 @@
 .first {
     display: flex;
 }
+
 .image {
-    width: 120px;
+    max-width: 205px;
+    max-height: 200px;
 }
+.goal {
+    background: url(../../../images/goal.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 205px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0px 0px 30px;
+}
+
 
 .cost {
     margin-top: 10px;
@@ -25,7 +39,7 @@
     background-color: red;
     border-radius: 5px;
     color: white;
-
+    margin: 20px 0px 0px 0px;
     cursor: pointer;
     font-size: 17px;
     font-family: "Montserrat";
@@ -43,7 +57,6 @@
     margin-left: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .description {

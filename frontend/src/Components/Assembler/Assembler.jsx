@@ -12,6 +12,7 @@ const Assembler = () => {
         <Categories />
         <Accessories/>
         <Detail />
+        
       </div>
 
     </div>

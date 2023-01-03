@@ -28,14 +28,18 @@
     cursor: pointer;
     transition: 0.2s;
 }
+
 .accessory:hover {
     color: rgb(125, 48, 48);
-  }
+}
+
 .accessorySelected {
+    cursor: pointer;
     font-size: 26px;
     color: rgb(131, 0, 0);
     margin: 0px 0px 20px 20px;
 }
+
 .accessoryBorder {
     margin: 8px 20px 0px 0px;
     border-bottom: 3px dashed rgb(131, 0, 0);

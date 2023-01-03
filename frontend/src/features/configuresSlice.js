@@ -6,7 +6,8 @@ const initialState = {
     configures: [],
     configure: '63b0179bbaabfe23ec67d477'
 }
-
+export const addConfigure = createAsyncThunk(
+)
 export const configuresSlice = createSlice({
     name: "configures",
     initialState,
