@@ -7,7 +7,6 @@ import { fetchAssembles } from "../../features/assemblesSlice";
 
 const Header = () => {
   const dispatch = useDispatch();
-
   const token = useSelector((state) => state.users.token);
   const handleExit = () => {
     localStorage.clear()

@@ -56,7 +56,7 @@ const Fullstory = () => {
       ) : 
         cart ? <button  onClick={handleAdd} className={styles.buyButton2}>
         Купить
-      </button> : <button  className={styles.buyButton}>
+      </button> : <button  className={styles.buyButton2}>
           Купить
         </button>
       }
