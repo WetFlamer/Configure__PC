@@ -23,20 +23,20 @@ const Product = ({
 }) => {
   const dispatch = useDispatch();
   const [inCart, setInCart] = useState(false);
-  const cart = useSelector((state) => state.users.cart) 
+  const cart = useSelector((state) => state.users.cart);
   useEffect(() => {
-    if(cart) {
+    if (cart) {
       cart.map((assembly) => {
         if (assembly === id) {
-         return setInCart(true)
-        }     
+          return setInCart(true);
+        }
       });
     }
-  },[cart, id])  
-  const handleAdd =  () => {
-    setInCart(true)
+  }, [cart, id]);
+  const handleAdd = () => {
+    setInCart(true);
     dispatch(
-       addAssemblytoCart({
+      addAssemblytoCart({
         userId: localStorage.getItem("id"),
         assemblyId: id,
       })
@@ -56,21 +56,19 @@ const Product = ({
       </Link>
       <div className={styles.price}>{cost} ₽</div>
       <div className={styles.buttons}>
-      {inCart ? (
-        <div onClick={() => alert('Зайди в аккаунт чорт')} className={styles.buyButtonS}>
-          В корзине   
-        </div>
-      ) : 
-        cart ? <div  onClick={handleAdd} className={styles.buyButton}>
-        Купить
-      </div> : <div  className={styles.buyButton}>
-          Купить
-        </div>
-      }
+        {inCart ? (
+          <div className={styles.buyButtonS}>В корзине</div>
+        ) : cart ? (
+          <div onClick={handleAdd} className={styles.buyButton}>
+            Купить
+          </div>
+        ) : (
+          <div className={styles.buyButton}>Купить</div>
+        )}
 
-      <Link to={`/assembly/${id}`}>
-        <div className={styles.buttonMore}>Подробнее</div>
-      </Link>
+        <Link to={`/assembly/${id}`}>
+          <div className={styles.buttonMore}>Подробнее</div>
+        </Link>
       </div>
       <p className={styles.description}>{description}</p>
       <div className={styles.line}></div>
