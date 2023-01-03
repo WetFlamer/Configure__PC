@@ -77,7 +77,7 @@ const SignIn = () => {
           <form onSubmit={handleLogin} action="#" className={styles.formSignIn}>
             <h3 className={styles.formTitle}>Вход</h3>
 
-            <p>
+            <div>
               <input
                 onChange={handleSetLogin}
                 type="text"
@@ -85,8 +85,8 @@ const SignIn = () => {
                 placeholder="Логин"
                 className={styles.formInput}
               />
-            </p>
-            <p>
+            </div>
+            <div>
               <input
                 onChange={handleSetPassword}
                 type="password"
@@ -94,28 +94,28 @@ const SignIn = () => {
                 placeholder="Пароль"
                 className={styles.formInput}
               />
-            </p>
-            <p>
+            </div>
+            <div>
               <button type="submit" className={styles.formButton}>
                 Войти
               </button>
-            </p>
-            <p className={styles.formForgot}>
-              <a href="/" >
+            </div>
+            <div className={styles.formForgot}>
+              <a target='_blank' rel='noreferrer' href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" >
                 Забыли пароль?
               </a>
-            </p>
-            <p className={styles.error}>
+            </div>
+            <div className={styles.error}>
               {" "}
               {error ? (
                 error
               ) : (
                 <p className={styles.successfully}>{successfully}</p>
               )}
-            </p>
+            </div>
             {loading ? (
-              <div class={styles.loader}>
-                <div class={styles.scanner}>
+              <div className={styles.loader}>
+                <div className={styles.scanner}>
                   <span>Loading...</span>
                 </div>
               </div>
@@ -129,7 +129,7 @@ const SignIn = () => {
           >
             <h3 className={styles.formTitle}>Регистрация</h3>
 
-            <p>
+            <div>
               <input
                 onChange={handleSetLogin}
                 type="text"
@@ -137,8 +137,8 @@ const SignIn = () => {
                 placeholder="Логин"
                 className={styles.formInput}
               />
-            </p>
-            <p>
+            </div>
+            <div>
               <input
                 onChange={handleSetPassword}
                 type="password"
@@ -146,13 +146,13 @@ const SignIn = () => {
                 placeholder="Пароль"
                 className={styles.formInput}
               />
-            </p>
-            <p>
+            </div>
+            <div>
               <button type="submit" className={styles.formButton}>
                 Зарегистрироваться
               </button>
-            </p>
-            {error ? <p className={styles.error}>{error}</p> : null}
+            </div>
+            {error ? <div className={styles.error}>{error}</div> : null}
           </form>
         </div>
       </article>

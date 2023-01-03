@@ -41,7 +41,7 @@
 .buyButton {
   border: none;
   width: 93px;
-  height: 40px;
+  height: 100%;
   background-color: red;
   border-radius: 5px;
   color: white;
@@ -49,6 +49,10 @@
   cursor: pointer;
   font-size: 17px;
   font-family: "Montserrat";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .buyButton:hover {
@@ -69,12 +73,18 @@
   color: white;
   font-family: "Montserrat";
   background-color: rgb(58, 57, 57);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .buttonMore:hover {
   background-color: rgb(69, 68, 68);
 }
-
+.buttonMore:active {
+  background-color: rgb(69, 68, 68);
+}
 .description {
   width: 272px;
   height: 80px;
@@ -362,7 +372,7 @@
 .buyButtonS {
   border: none;
   width: 93px;
-  height: 40px;
+  height: 100%;
   background-color: rgb(127, 120, 120);
   border-radius: 5px;
   color: white;
@@ -370,4 +380,12 @@
   cursor: pointer;
   font-size: 17px;
   font-family: "Montserrat";
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttons {
+  height: 40px;
+  display: flex;
 }
