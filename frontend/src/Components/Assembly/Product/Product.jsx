@@ -1,4 +1,5 @@
-import React  from "react";
+import React, { useState } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { addAssemblytoCart } from "../../../features/usersSlice";
@@ -21,12 +22,26 @@ const Product = ({
   image,
 }) => {
   const dispatch = useDispatch();
-  const handleAdd = async () => {
+  const [inCart, setInCart] = useState(false);
+  const cart = useSelector((state) => state.users.cart) 
+  useEffect(() => {
+    if(cart) {
+      cart.map((assembly) => {
+        if (assembly === id) {
+         return setInCart(true)
+        }     
+      });
+    }
+  },[cart, id])  
+  const handleAdd =  () => {
+    setInCart(true)
     dispatch(
-      await addAssemblytoCart({ userId: localStorage.getItem("id"), assemblyId: id })
+       addAssemblytoCart({
+        userId: localStorage.getItem("id"),
+        assemblyId: id,
+      })
     );
-  
-  }
+  };
 
   return (
     <div className={styles.productContainer}>
@@ -35,13 +50,28 @@ const Product = ({
         src={`/assets/images/assembly/${image}`}
         alt=""
       />
-     <Link to={`/assembly/${id}`}> <div className={styles.title}>{name}</div></Link>
+      <Link to={`/assembly/${id}`}>
+        {" "}
+        <div className={styles.title}>{name}</div>
+      </Link>
       <div className={styles.price}>{cost} ₽</div>
+      <div className={styles.buttons}>
+      {inCart ? (
+        <div onClick={() => alert('Зайди в аккаунт чорт')} className={styles.buyButtonS}>
+          В корзине   
+        </div>
+      ) : 
+        cart ? <div  onClick={handleAdd} className={styles.buyButton}>
+        Купить
+      </div> : <div  className={styles.buyButton}>
+          Купить
+        </div>
+      }
 
-      <button  onClick={handleAdd} className={styles.buyButton}>
-            Купить
-          </button>
-      <Link to={`/assembly/${id}`}><button className={styles.buttonMore}>Подробнее</button></Link>
+      <Link to={`/assembly/${id}`}>
+        <div className={styles.buttonMore}>Подробнее</div>
+      </Link>
+      </div>
       <p className={styles.description}>{description}</p>
       <div className={styles.line}></div>
       <div className={styles.catalog}>

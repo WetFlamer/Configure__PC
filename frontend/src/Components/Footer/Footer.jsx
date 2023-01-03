@@ -9,6 +9,13 @@ import { Link } from "react-router-dom";
 import Map from "./MapPage/Map";
 
 const Footer = () => {
+  const handleTop = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <footer>
       <div className={styles.mainContainer}>
@@ -16,14 +23,16 @@ const Footer = () => {
           <div className={styles.wrapper_1}>
             <h4 className={styles.h4}>Оставайтесь на связи</h4>
             <h5>
-              <Link to="/map" element={<Map />}>
+              <Link onClick={handleTop} to="/map/" element={<Map />}>
                 г. Грозный, улица Трошева 7, ТД «Медина», 3 этаж, 1 кабинет
               </Link>{" "}
             </h5>
             <br />
             <p>Обработка и прием заказов по телефону:</p>
             <br />
-            <a href="tel:+88005553535"><h2>8 (800) 555 35 35</h2></a>
+            <a href="tel:+88005553535">
+              <h2>8 (800) 555 35 35</h2>
+            </a>
             <br />
             <p>
               Пн-Пт: 9:00 - 18:00 <br />
