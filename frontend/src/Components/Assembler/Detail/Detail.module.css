@@ -6,11 +6,18 @@
 }
 
 .first {
+}
+.goal {
+    background: url(../../../images/goal.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 205px;
+    height: 200px;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.image {
-    width: 120px;
-}
+
 
 .cost {
     margin-top: 10px;

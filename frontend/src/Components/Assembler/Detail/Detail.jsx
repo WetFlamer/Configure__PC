@@ -14,7 +14,7 @@ const Detail = () => {
                     return (
                         <div className={styles.main}>
                             <div className={styles.first}>
-                                <img src={`/assets/images/accessories/${accessory.image}`} alt="image" className={styles.image} />
+                                <div className={styles.goal}><img src={`/assets/images/accessories/${accessory.image}`} alt="image" className={styles.image} /></div>
                                 <div className={styles.second}>
                                     <div className={styles.cost}> {accessory.cost} ₽</div>
                                     <button className={styles.btn}>Выбрать</button>
