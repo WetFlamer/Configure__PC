@@ -389,3 +389,16 @@
   height: 40px;
   display: flex;
 }
+
+.buyButton2S {
+  border: none;
+  min-width: 11.25rem;
+  height: 56px;
+  background-color: rgb(127, 120, 120);
+  border-radius: 5px;
+  color: white;
+
+  cursor: pointer;
+  font-size: 17px;
+  font-family: "Montserrat";
+}

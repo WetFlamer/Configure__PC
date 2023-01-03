@@ -1,8 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { fetchAcs } from "../../../features/accessoriesSlice";
 import { fetchCategories } from "../../../features/categoriesSlice";
+import { addAssemblytoCart } from "../../../features/usersSlice";
 import styles from "./Product.module.css";
 const Fullstory = () => {
   const { id } = useParams();
@@ -13,6 +14,27 @@ const Fullstory = () => {
     dispatch(fetchAcs());
     dispatch(fetchCategories());
   }, [dispatch]);
+  const [inCart, setInCart] = useState(false);
+  const cart = useSelector((state) => state.users.cart) 
+  const token = useSelector((state) => state.users.token)
+  useEffect(() => {
+    if(token) {
+      cart.map((assembly) => {
+        if (assembly === id) {
+         return setInCart(true)
+        }     
+      });
+    }
+  },[cart, id])  
+  const handleAdd =  () => {
+    setInCart(true)
+    dispatch(
+       addAssemblytoCart({
+        userId: localStorage.getItem("id"),
+        assemblyId: id,
+      })
+    );
+  };
   return (
     <div className={styles.main}>
       <div className={styles.bg}>
@@ -27,7 +49,17 @@ const Fullstory = () => {
                     {item.description}
                   </div>
                   <div className={styles.buttonSection}>
-                    <button className={styles.buyButton2}>Купить</button>
+                  {inCart ? (
+        <button  className={styles.buyButton2S}>
+          В корзине   
+        </button>
+      ) : 
+        cart ? <button  onClick={handleAdd} className={styles.buyButton2}>
+        Купить
+      </button> : <button  className={styles.buyButton}>
+          Купить
+        </button>
+      }
                     <div className={styles.priceBox}>
                       <p className={styles.detalicPrice}>
                         {item.cost}
