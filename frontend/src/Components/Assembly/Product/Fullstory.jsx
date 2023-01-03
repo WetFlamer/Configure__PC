@@ -275,7 +275,7 @@ const Fullstory = () => {
                           />
                         </div>
                         <p className={styles.featuresText}>
-                          Официальная гарантия
+                        Профессиональная сборка
                         </p>
                       </li>
                     </ul>
