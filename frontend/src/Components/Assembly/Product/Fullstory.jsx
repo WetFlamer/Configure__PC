@@ -25,7 +25,7 @@ const Fullstory = () => {
         }     
       });
     }
-  },[cart, id])  
+  },[cart, id, token])  
   const handleAdd =  () => {
     setInCart(true)
     dispatch(
@@ -86,7 +86,7 @@ const Fullstory = () => {
                                   src={`/assets/images/${acs.category.image_white}`}
                                   alt="poster"
                                 />
-                                <p className={styles.detailName}>{acs.name}</p>
+                                <p className={styles.detailName}>{acs.name.length > 1 ? acs.name.slice(0, 21) + "..." : acs.name}</p>
                               </div>
                             );
                           }
@@ -104,7 +104,7 @@ const Fullstory = () => {
                                   src={`/assets/images/${acs.category.image_white}`}
                                   alt="poster"
                                 />
-                                <p className={styles.detailName}>{acs.name}</p>
+                                <p className={styles.detailName}>{acs.name.length > 1 ? acs.name.slice(0, 21) + "..." : acs.name}</p>
                               </div>
                             );
                           }
@@ -142,7 +142,7 @@ const Fullstory = () => {
                                   src={`/assets/images/${acs.category.image_white}`}
                                   alt="poster"
                                 />
-                                <p className={styles.detailName}>{acs.name}</p>
+                                <p className={styles.detailName}>{acs.name.length > 1 ? acs.name.slice(0, 21) + "..." : acs.name}</p>
                               </div>
                             );
                           }
