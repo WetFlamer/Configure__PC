@@ -34,8 +34,9 @@ const Accessories = () => {
     return (
         <div className={styles.main}>
             {accessories.map((accessory) => {
+
                 return (
-                    <div className={selected === accessory._id ? styles.accessorySelected : styles.accessory} onClick={() => handleAccessory(accessory._id)}>
+                    <div key={accessory._id} className={selected === accessory._id ? styles.accessorySelected : styles.accessory} onClick={() => handleAccessory(accessory._id)}>
                         {accessory.name}
                         <div className={styles.accessoryBorder}></div>
                     </div>
