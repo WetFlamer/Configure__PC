@@ -55,7 +55,8 @@ footer {
 }
 
 .wrapper_1 .h4 {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 3px;
   width: 100%;
   margin-bottom: 40px;
 }
@@ -68,7 +69,8 @@ footer {
 }
 
 .company .h4 {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 3px;
   width: 100%;
   margin-bottom: 40px;
   color: #ccc;
@@ -88,7 +90,8 @@ footer {
 }
 
 .buyers .h4 {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 3px;
   width: 100%;
   margin-bottom: 40px;
   color: #ccc;

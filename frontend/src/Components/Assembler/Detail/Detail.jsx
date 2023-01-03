@@ -12,7 +12,7 @@ const Detail = () => {
             {accessories.map((accessory) => {
                 if (selectedAccessory === accessory._id) {
                     return (
-                        <div className={styles.main}>
+                        <div key={accessory._id} className={styles.main}>
                             <div className={styles.first}>
                                 <div className={styles.goal}><img src={`/assets/images/accessories/${accessory.image}`} alt="image" className={styles.image} /></div>
                                 <div className={styles.second}>
