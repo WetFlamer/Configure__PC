@@ -24,7 +24,7 @@ const Fullstory = () => {
         }     
       });
     }
-  },[cart, id, token])  
+  },[cart, id])  
   const handleAdd =  () => {
     setInCart(true)
     dispatch(
