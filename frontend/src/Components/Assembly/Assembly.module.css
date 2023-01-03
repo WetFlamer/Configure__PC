@@ -16,7 +16,7 @@
 }
 .loader {
     --height-of-loader: 4px;
-    --loader-color: #0071e2;
+    --loader-color: #e20000;
     width: 60%;
     height: var(--height-of-loader);
     border-radius: 30px;

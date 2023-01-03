@@ -22,8 +22,8 @@ const CartItems = ({ id }) => {
               <div className={styles.basket_item}>
                 <div className={styles.basket_itemCard}>
                   <img
-                    className="basket_ItemImage"
-                    src={`/assets/images/accessories/${assembly.image}`}
+                    className={styles.basket_ItemImage}
+                    src={`/assets/images/assembly/${assembly.image}`}
                     alt="poster"
                   />
                   <p className={styles.basket_itemName}>{assembly.name}</p>
@@ -34,7 +34,6 @@ const CartItems = ({ id }) => {
                   src="/assets/images/cost.png"
                   alt=""
                 />
-                <button className={styles.buttonBuy}>Купить</button>
                 <button onClick={handleDelete} className={styles.buttonDelete}>X</button>
               </div>
             </div>

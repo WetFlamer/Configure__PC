@@ -21,7 +21,6 @@ const Product = ({
   image,
 }) => {
   const dispatch = useDispatch();
-  const loading = useSelector((state) => state.users.loading);
   const handleAdd = async () => {
     dispatch(
       await addAssemblytoCart({ userId: localStorage.getItem("id"), assemblyId: id })
@@ -43,7 +42,6 @@ const Product = ({
             Купить
           </button>
       <Link to={`/assembly/${id}`}><button className={styles.buttonMore}>Подробнее</button></Link>
-      {loading === true ? <div className={styles.loader}></div> : null}
       <p className={styles.description}>{description}</p>
       <div className={styles.line}></div>
       <div className={styles.catalog}>
