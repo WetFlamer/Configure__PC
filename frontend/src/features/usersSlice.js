@@ -1,4 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import configuresSlice from "./configuresSlice";
 const initialState = {
   loading: false,
   error: false,
@@ -63,6 +64,7 @@ export const fetchCart = createAsyncThunk(
         return thunkAPI.rejectWithValue(user.error.message);
       }
       return thunkAPI.fulfillWithValue(user);
+      
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }

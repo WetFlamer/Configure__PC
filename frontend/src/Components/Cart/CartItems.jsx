@@ -15,6 +15,7 @@ const CartItems = ({ id }) => {
         }
         if (assembly._id === id) {
           return (
+            <>
             <div className={styles.basket_itemBox}>
               <div className={styles.basket_item}>
                 <div className={styles.basket_itemCard}>
@@ -34,6 +35,7 @@ const CartItems = ({ id }) => {
                 <button onClick={handleDelete} className={styles.buttonDelete}>X</button>
               </div>
             </div>
+            </>
           );
         }
         return null
