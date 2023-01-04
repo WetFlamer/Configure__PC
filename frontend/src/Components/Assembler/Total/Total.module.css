@@ -26,3 +26,11 @@
   font-size: 16px;
   margin-left: 100px;
 }
+button:hover {
+  background-color: rgb(127, 120, 120);
+
+}
+button:active {
+  background-color: rgb(154, 144, 144);
+
+}
