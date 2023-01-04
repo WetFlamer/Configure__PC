@@ -1,7 +1,5 @@
 import React from "react";
-import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getConfigures } from "../../features/configuresSlice";
 import { deleteAssemblyfromCart, fetchCart } from "../../features/usersSlice";
 import styles from "./Cart.module.css";
 
@@ -79,3 +77,5 @@ const CartItems = ({ id }) => {
 };
 
 export default CartItems;
+
+
