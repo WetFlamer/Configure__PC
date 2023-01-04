@@ -110,15 +110,6 @@ const Cart = () => {
               <button onClick={(() => alert('Вы успешно оформили заказ. Наш представитель свяжется с вами примерно через: Никогда'))} className={styles.buttonBuy3}>Оформить заказ</button>
             </form>
           </div>
-        <div>{cart.length === 0 ? <div className={styles.titleFalse}>Корзина пуста</div> : (<div className={styles.title}>Корзина</div>)}</div>
-        <div className={styles.basket_start}>
-          {loading ? <div className={styles.loader}></div> : cart.map((item) => { return  (<CartItems id={item} />) })}
-          <h1 className={styles.globalPrice}>Общая стоимость: <div className={styles.totalCost}>{sum} <img
-            className={styles.costImage}
-            src="/assets/images/cost.png"
-            alt=""
-          /></div>
-          </h1>
         </div>
       </div>
     </div>
