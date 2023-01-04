@@ -64,7 +64,7 @@ module.exports.configureController = {
     },
     getConfigure: async (req, res) => {
         try {
-            const configure = await Configure.find();
+            const configure = await Configure.find().populate('compCase');
             return res.json(configure);
         } catch (error) {
             return res.json({ error: error.message });
