@@ -12,6 +12,7 @@ app.use(express.json())
 app.use(require('./routes/'))
 app.use(express.static(path.join(__dirname)))
 
+mongoose.set('strictQuery', true);
 
 const {PORT, MONGO_SERVER} = process.env
 

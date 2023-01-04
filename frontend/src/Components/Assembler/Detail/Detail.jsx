@@ -9,10 +9,10 @@ const Detail = () => {
 
     const dispatch = useDispatch()
     const selectedAccessory = useSelector((state) => state.accessories.accessory);
-    const handleAddToConfigure = ({value, key, cost}) => {
-        dispatch(editConfigure({key, value, cost, id: configure}))
+    const handleAddToConfigure = ({ value, key, cost }) => {
+        dispatch(editConfigure({ key, value, cost, id: configure }))
     }
-
+    
     return (
         <>
             {accessories.map((accessory) => {
@@ -23,7 +23,7 @@ const Detail = () => {
                                 <div className={styles.goal}><img src={`/assets/images/accessories/${accessory.image}`} alt="image" className={styles.image} /></div>
                                 <div className={styles.second}>
                                     <div className={styles.cost}> {accessory.cost} ₽</div>
-                                    <button className={styles.btn} onClick={() => handleAddToConfigure({value: selectedAccessory, key: accessory.category.key, cost: accessory.cost})}>Выбрать</button>
+                                    <button className={styles.btn} onClick={() => handleAddToConfigure({ value: selectedAccessory, key: accessory.category.key, cost: accessory.cost })}>Выбрать</button>
                                 </div>
                             </div>
 

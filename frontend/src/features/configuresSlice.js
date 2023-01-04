@@ -5,6 +5,7 @@ const initialState = {
     error: null,
     configures: [],
     configure: localStorage.getItem('configure'),
+    configureObj: localStorage.getItem('configureObj'),
     configureObj2: {}
 }
 export const addConfigure = createAsyncThunk('add/configure', async (data, thunkAPI) => {
@@ -39,6 +40,15 @@ export const editConfigure = createAsyncThunk('edit/configure', async ({ key, va
         thunkAPI.rejectWithValue(error)
     }
 })
+export const getConfigures = createAsyncThunk('get/congigures', async (_, thunkAPI) => {
+    try {
+        const res = await fetch('/configure')
+        const configure = await res.json()
+        return thunkAPI.fulfillWithValue(configure) 
+    } catch (error) {
+        thunkAPI.rejectWithValue(error)
+    }
+})
 export const configuresSlice = createSlice({
     name: "configures",
     initialState,
@@ -48,8 +58,10 @@ export const configuresSlice = createSlice({
             .addCase(editConfigure.fulfilled, (state, action) => {
                 state.configureObj2 = action.payload;
             })
+            .addCase(getConfigures.fulfilled, (state, action) => {
+                state.configures = action.payload
+            })
     },
 });
-
 
 export default configuresSlice.reducer;
