@@ -32,6 +32,7 @@ const Product = ({
         }
       });
     }
+    
   }, [cart, id]);
   const handleAdd = () => {
     setInCart(true);
