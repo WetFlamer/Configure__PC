@@ -19,7 +19,7 @@ function App() {
       <Routes>
       {token ?  <Route path="/cart" element={<Cart />} /> :  <Route path="/cart" element={<Navigate to={'/configurator'}/>} />}
         <Route path="/" element={<Navigate to={"/configurator"} />} />
-        <Route path="/configurator" element={<Assembler />} />
+        <Route path="/configurator" element={<Assembler/>} />
         <Route path="/assembly" element={<Assembly />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="assembly/:id" element={<Fullstory />} />

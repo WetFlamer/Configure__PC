@@ -73,7 +73,8 @@ const configureSchema = mongoose.Schema({
   },
   cost: {
     type: Number,
-    require: true,
+    require: false,
+    default: 0
   },
 });
 
