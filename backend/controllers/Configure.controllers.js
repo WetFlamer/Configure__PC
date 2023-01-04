@@ -49,45 +49,14 @@ module.exports.configureController = {
     },
     editConfigure: async (req, res) => {
         const {
-            name,
-            description,
-            processor,
-            motherboard,
-            graphics,
-            ram,
-            ssd,
-            hdd,
-            compCase,
-            power,
-            sound,
-            os,
-            mouse,
-            keyboard,
-            monitor,
-            headset,
-            cost
+            key, value, cost
         } = req.body;
 
         try {
             const configure = await Configure.findByIdAndUpdate(req.params.id, {
-                name: name,
-                description: description,
-                processor: processor,
-                motherboard: motherboard,
-                graphics: graphics,
-                ram: ram,
-                ssd: ssd,
-                hdd: hdd,
-                compCase: compCase,
-                power: power,
-                sound: sound,
-                os: os,
-                mouse: mouse,
-                keyboard: keyboard,
-                monitor: monitor,
-                headset: headset,
-                cost: cost
-            })
+                [key]: value,
+                $inc: { cost: cost}
+            }, { new: true })
             return res.status(200).json(configure);
         } catch (error) {
             return res.json({ error: error.message });
@@ -101,4 +70,12 @@ module.exports.configureController = {
             return res.json({ error: error.message });
         }
     },
+    getConfigureById: async (req, res) => {
+        try {
+            const configure = await Configure.findById(req.params.id)
+            return res.json(configure)
+        } catch (error) {
+            return res.json({ error: error.message });
+        }
+    }
 };
