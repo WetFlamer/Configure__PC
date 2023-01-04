@@ -14,7 +14,7 @@ const Total = () => {
   return (
     <div className={styles.container}>
       <div className={styles.costBox}>
-        <p>Общая стоимость: {configure.cost} ₽ </p>
+        <p>Общая стоимость: {configure.cost || 0} ₽ </p>
       </div>
       <div className={styles.cartBox}>
         <button onClick={() => handleAdd()}>В корзину</button>
