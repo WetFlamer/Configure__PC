@@ -6,21 +6,28 @@
 
 ## Функционал и содержание сайта
 
-### - Авторизация 
+### - Авторизация
+
 ![image](./assets/authorization.gif)
 
 ### - Выбор комплектующих для компьютера
+
 ![image](./assets/assembling.gif)
 
 ### - Добавление собранного компьютера в корзину и оформление заказа
+
 ![image](./assets/addToCart.gif)
 
 ### - Выбор одной из готовых сборок
+
 ![image](./assets/assemblies.gif)
 
 ### - Просмотреть адрес офиса
+
 ### - Изучить историю компании
+
 ### - Валидация при авторизации
+
 ### - И другое
 
 ___
@@ -46,51 +53,46 @@ ___
 
 ___
 
+<br>
+
 ## Команда проекта
 
----
-
-<h3>
   <a href="https://github.com/4abaev">
     <img alt="Khalimov" src="https://img.shields.io/badge/-CHABAEV_RASHID-black?style=for-the-badge&logo=github&logoColor=white" />
   </a>
-</h3>
-
-<h3>
   <a href="https://github.com/zxcviolence">
     <img alt="Kharsaeva" src="https://img.shields.io/badge/-YAKUBOV_ISLAM-black?style=for-the-badge&logo=github&logoColor=white" />
   </a>
-</h3>
-
-<h3>
   <a href="https://github.com/WetFlamer">
     <img alt="Kasumov" src="https://img.shields.io/badge/-CHABAEV_KHAMID-black?style=for-the-badge&logo=github&logoColor=white" />
   </a>
-</h3>
-
-
 
 ---
 
 ## Запуск проекта
+
 ### Перед запуском проекта в директории "backend" создать .env файл, и заполнить его по образцу существующего env.txt. Открыть терминал в "backend" и набрать
+
 ```javascript
 npm i
 ```
+
 ```javascript
 npm nodemon
 ```
 
 <br>
 
-### Затем открыть терминал в директории frontend и набрать 
+### Затем открыть терминал в директории frontend и набрать
 
 ```javascript
 npm i
 ```
+
 ```javascript
 npm start
 ```
+
 ___
 
 ## Задачи которые я решил
@@ -98,5 +100,3 @@ ___
 - Настроил и выгрузил MVP, т.е. создал реакт-апп и почистил его, на бэке создаль модель юзера, контроллеры к нему и роуты. С этого началась работа.
 - В моей ответственности была полностью страница "Assembler" т.е. Сборщик, прописал всю логику и дизайн.
 - Выполнял роль тимлида, распределял задачи команде из трёх человек(я включительно)
-
-
