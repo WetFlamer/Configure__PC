@@ -1,4 +1,4 @@
-<img  src="./assets/logo.png" width='450px'/>
+
 
 # Сайт для сборки ПК
 
