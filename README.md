@@ -1,5 +1,5 @@
-<img  src="./assets/matrix.PNG" width="100%" height="100px"/>
-
+<div style='display: flex'><img  src="./assets/logo.png" width='150px'/><h1  style=' display:flex; align-items: end; font-size: 40px'>atrix</h1>
+</div>
 <br>
 
 # Сайт для сборки ПК
