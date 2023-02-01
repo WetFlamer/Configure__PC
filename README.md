@@ -1,6 +1,4 @@
-<div style='display: flex'><img  src="./assets/logo.png" width='150px'/><h1  style=' display:flex; align-items: end; font-size: 40px'>atrix</h1>
-</div>
-<br>
+<img  src="./assets/logo.png" width='450px'/>
 
 # Сайт для сборки ПК
 
